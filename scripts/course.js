@@ -83,15 +83,27 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     ];
 
-    
+
     function displayCourse(filter) {
-        courseList.innerHTML = "";
+        courseList.innerHTML = "";  // Clear existing content
+
         const filteredCourses = courses.filter(course => filter === "all" || course.subject === filter);
 
         filteredCourses.forEach(course => {
-            const li = document.createElement("li");
-            li.textContent = course.title;
-            courseList.appendChild(li);
+            const button = document.createElement("button");
+            button.textContent = course.title;
+            button.style.backgroundColor = course.completed ? "green" : "red";  // Change color based on completion
+            button.style.color = "white";
+            button.style.border = "none";
+            button.style.padding = "10px";
+            button.style.margin = "5px";
+            button.style.cursor = "pointer";
+            button.style.display = "block";
+            button.style.width = "100%";
+            button.style.fontSize = "16px";
+            button.style.borderRadius = "5px";
+
+            courseList.appendChild(button);
         });
     }
 
@@ -99,17 +111,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     buttons.forEach(button => {
         button.addEventListener("click", () => {
-            // remove active class from all buttons
-            buttons.forEach(btn => btn.classList.remove("active"));
-
-            // add active class to clicked button
-            button.classList.add("active");
-
-            // Get filter type from buttons data attribute it should be the courses subject
-            const filterType = button.getAttribute("data-filter");
+            buttons.forEach(btn => btn.classList.remove("active"));  // Remove active class from all buttons
+            button.classList.add("active");  // Add active class to clicked button
+            const filterType = button.getAttribute("data-filter");  // Get filter type from data attribute
             displayCourse(filterType);
-        
-        });  
+        });
     });
 });
-   

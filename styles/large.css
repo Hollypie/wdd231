@@ -8,15 +8,22 @@
 
 .content {
     display: grid;
+    grid-template-columns: 1fr;
     grid-template-rows: auto auto;
     gap: 1rem; /* addes space between rows */
 }
 
 .content1 {
     display: grid;
+    grid-column: 1 / 2;
     grid-row: 1 / 2;
     grid-template-columns: 60% 40%;
     gap: 1rem; /* Optional: Adds space between the columns */
+}
+
+.content2 {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
 }
 
 .course {
@@ -27,7 +34,17 @@
     grid-column: 2 / 3;
 }
 
-.content2 {
-    grid-row: 2 / 3;
-}
 
+
+@media (min-width: 768px) {
+    #course-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+        gap: 10px; /* Space between buttons */
+        justify-content: center; /* Center the grid */
+    }
+
+    #course-list button {
+        width: 100%; /* Ensures buttons take full width of grid column */
+    }
+}

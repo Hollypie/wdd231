@@ -223,6 +223,7 @@ section {
     display: flex;
     gap: 10px;
     margin-bottom: 1rem;
+    
 }
 
 .filter-btn {
@@ -237,6 +238,23 @@ section {
 .filter-btn.active {
     background-color: var(--accent-color);
     color: var(--dark-font-color);
+}
+
+.filter-container {
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+}
+
+#course-list {
+    display: flex;
+    flex-direction: column; /* Stack buttons in a single column */
+    align-items: center;
+    gap: 10px; /* Space between buttons */
+}
+
+#course-list button {
+    width: 100%; /* Make buttons full width */
+    max-width: 300px; /* Optional: Limit max width */
 }
 
 footer {
