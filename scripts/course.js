@@ -2,6 +2,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const buttons = document.querySelectorAll(".filter-btn");
     const courseList = document.getElementById("course-list");
 
+    const rootStyles = getComputedStyle(document.documentElement);
+    const completedColor = rootStyles.getPropertyValue('--accent-color').trim(); // Remove extra spaces
+    const incompleteColor = rootStyles.getPropertyValue('white').trim();
+    const fontColor = rootStyles.getPropertyValue('black').trim();
+    const buttonFont = rootStyles.getPropertyValue('--main-font').trim();
         
     const courses = [
         {
@@ -92,8 +97,8 @@ document.addEventListener("DOMContentLoaded", () => {
         filteredCourses.forEach(course => {
             const button = document.createElement("button");
             button.textContent = course.title;
-            button.style.backgroundColor = course.completed ? "green" : "red";  // Change color based on completion
-            button.style.color = "white";
+            button.style.backgroundColor = course.completed ? completedColor : incompleteColor;
+            button.style.color = fontColor;  // White font color
             button.style.border = "none";
             button.style.padding = "10px";
             button.style.margin = "5px";

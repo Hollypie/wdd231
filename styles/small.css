@@ -8,7 +8,7 @@
 :root {
     --primary-color: #596235;
     --second-color:  #2F3020;
-    --accent-color: #D96846;
+    --accent-color: #e98e72;
     --background-color: #CDCBD6;
     --light-font-color: white;  
     --dark-font-color: black;
@@ -241,8 +241,8 @@ section {
 }
 
 .filter-btn.active {
-    background-color: var(--accent-color);
-    color: var(--dark-font-color);
+    background-color: var(--primary-color);
+    color: var(--light-font-color);
 }
 
 .filter-container {
