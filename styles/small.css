@@ -1,4 +1,4 @@
-/* 🔹 Header Styling */
+
 
 * {
     font-family: var(--title-font);
@@ -59,7 +59,7 @@ img {
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
 }
 
-/* 🔹 Hamburger Button Styling */
+
 #menu {
     width: 40px;
     height: 30px;
@@ -80,7 +80,7 @@ img {
     transition: 0.3s ease;
 }
 
-/* Change icon when menu opens */
+
 #menu.open span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }
@@ -94,7 +94,7 @@ img {
 }
 
 
-/* 🔹 Navigation - Hidden by Default (for small screens) */
+
 .navigation {
     display: flex;
     flex-direction: column;
@@ -110,21 +110,21 @@ img {
     pointer-events: none;
 }
 
-/* 🔹 Show Navigation When Open */
+
 .navigation.open {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
 }
 
-/* 🔹 Navigation List */
+
 .navigation ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-/* 🔹 Menu Items */
+
 .navigation li {
     padding: 1rem;
 }
@@ -137,13 +137,12 @@ img {
     transition: color 0.3s ease;
 }
 
-/* 🔹 Change color on hover */
 .navigation a:hover {
     background-color: var(--accent-color);
     color: var(--dark-font-color);
 }
 
-/* 🔹 Center Navigation and Make It Horizontal on Large Screens */
+
 @media (min-width: 768px) {
     #menu {
         display: none; /* Hide button */
@@ -208,10 +207,10 @@ h1 {
     height: 70%; /* Ensure the card fills available height */
 }
 
-/* Centered text under the image */
+
 .city-text {
-    font-size: 1.2rem; /* Adjust text size */
-    color: var(--dark-font-color); /* Adjust text color if needed */
+    font-size: 1.2rem; 
+    color: var(--dark-font-color); 
 }
 
 section {
@@ -258,8 +257,8 @@ section {
 }
 
 #course-list button {
-    width: 100%; /* Make buttons full width */
-    max-width: 300px; /* Optional: Limit max width */
+    width: 100%; 
+    max-width: 300px; 
 }
 
 footer {
@@ -275,6 +274,6 @@ footer {
     }
 
     .title_image {
-        width: 120px; /* Fixed width for logo */
+        width: 120px; /* Fixed width for img */
     }
 }
