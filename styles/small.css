@@ -1,0 +1,150 @@
+/* 🔹 Header Styling */
+
+* {
+    font-family: var(--title-font);
+    font-weight: 500;
+}
+
+:root {
+    --primary-color: #596235;
+    --second-color:  #2F3020;
+    --accent-color: #D96846;
+    --background-color: #CDCBD6;
+    --light-font-color: white;  
+    --dark-font-color: black;
+
+    --title-font: 'Open Sans';
+    --main-font: 'Open Sans';
+    
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--primary-color);
+    padding: 1rem;
+    color: white;
+}
+
+/* 🔹 Hamburger Button Styling */
+#menu {
+    width: 40px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+#menu span {
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: var(--light-font-color);
+    transition: 0.3s ease;
+}
+
+/* Change icon when menu opens */
+#menu.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+#menu.open span:nth-child(2) {
+    opacity: 0;
+}
+
+#menu.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+/* 🔹 Navigation - Hidden by Default (for small screens) */
+.navigation {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: var(--second-color);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+}
+
+/* 🔹 Show Navigation When Open */
+.navigation.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* 🔹 Navigation List */
+.navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 🔹 Menu Items */
+.navigation li {
+    padding: 1rem;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+/* 🔹 Change color on hover */
+.navigation a:hover {
+    background-color: var(--accent-color);
+    color: var(--dark-font-color);
+}
+
+/* 🔹 Center Navigation and Make It Horizontal on Large Screens */
+@media (min-width: 768px) {
+    #menu {
+        display: none; /* Hide button */
+    }
+
+    .navigation {
+        position: static;
+        opacity: 1;
+        transform: none;
+        pointer-events: auto;
+    }
+
+    .navigation ul {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        padding: 0;
+    }
+
+    .navigation li {
+        padding: 0.5rem 1rem;
+    }
+
+    .navigation a {
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        transition: background 0.3s ease;
+    }
+
+    .navigation a:hover {
+        background-color: var(--accent-color);
+        color: var(--dark-font-color);
+    }
+}
+

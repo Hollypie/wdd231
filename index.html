@@ -1,11 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="WDD 231 - Web FrontEnd Development 1 - Holly Briggs student page">
+    <meta name="author" content="Holly Briggs">
+    <title>WDD 231 - Web Frontend Development - Holly Briggs</title>
+    
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css" media="(min-width: 768px)">
+    
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <h1>WDD 231 - Holly Briggs</h1>
+    <header>
+        <h1>WDD 231 - Holly Briggs</h1>
+        
+        <!-- Hamburger Button -->
+        <button id="menu" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    
+        <!-- Navigation Menu -->
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Chamber</a></li>
+                <li><a href="https://github.com/Hollypie">Github</a></li>
+                <li><a href="https://www.linkedin.com/in/holly-briggs-2aa360237/">LinkedIn</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    
+    <main>
+        <h1>Home</h1>
+        <section>
+            <h2>Course Work</h2>
+        </section>
+        <section>
+            <h2>Orem, Utah</h2>
+        </section>
+        <section>
+            <h2>Web and Computer Programming Certificate</h2>
+        </section>
+
+    </main>
+    <footer>
+        <p>©<span id="yearDisplay"></span> Holly Briggs Utah, USA</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>
