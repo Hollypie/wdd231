@@ -18,14 +18,38 @@
     
 }
 
+.title {
+    display: grid;
+    grid-template-columns: auto auto;
+    font-size: 5vw;
+    margin: 1rem;
+}
+
+.title_image {
+    grid-column: 1 / 2;
+    align-self: center;
+    border-radius: .5rem;
+    width: 15vw;
+}
+
+.title_text {
+    grid-column: 2 / 3;
+    align-self: center;
+}
+
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     background-color: var(--primary-color);
-    padding: 1rem;
+    padding: .5rem;
     color: white;
+}
+
+img {
+    margin: 10px 30px 10px 0px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* 🔹 Hamburger Button Styling */
@@ -148,3 +172,12 @@ header {
     }
 }
 
+@media (min-width: 768px) {
+    .title {
+        font-size: 1rem; /* Set a fixed size for larger screens */
+    }
+
+    .title_image {
+        width: 120px; /* Fixed width for logo */
+    }
+}
