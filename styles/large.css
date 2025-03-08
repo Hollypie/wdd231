@@ -6,3 +6,28 @@
     width: 100px; /* Fixed width for logo */
 }
 
+.content {
+    display: grid;
+    grid-template-rows: auto auto;
+}
+
+.content1 {
+    display: grid;
+    grid-row: 1 / 2;
+    grid-template-columns: 70% 30%;
+    gap: 1rem; /* Optional: Adds space between the columns */
+}
+
+.course {
+    grid-column: 1 / 2;
+}
+
+.city {
+    grid-column: 2 / 3;
+}
+
+.content2 {
+    grid-row: 2 / 3;
+}
+
+

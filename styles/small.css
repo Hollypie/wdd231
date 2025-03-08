@@ -186,13 +186,15 @@ h1 {
 
 .card-bottom {
     display: flex;
-    flex-direction: column; /* Stacks content (image and text) vertically */
-    justify-content: center; /* Centers vertically */
-    align-items: center; /* Centers horizontally */
+    flex-direction: column; 
+    justify-content: space-between; /* Distribute space evenly */
+    align-items: center;
     background-color: var(--background-color);
     margin: 0;
     padding: 1rem;
     border-radius: 0 0 .5rem .5rem;
+    height: 100%; /* Ensure the card fills available height */
+    flex-grow: 1; /* Allow sections to grow and match height */
 }
 
 /* Centered text under the image */
