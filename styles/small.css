@@ -172,6 +172,10 @@ img {
     }
 }
 
+main {
+    padding: 2rem;
+}
+
 h1 {
     padding: 0 0 0 1.5rem;
 }
@@ -213,6 +217,26 @@ section {
     max-width: 50%; /* Ensure the image scales down to fit container */
     height: auto; /* Keep aspect ratio */
     border-radius: .5rem;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.filter-btn {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    border-radius: .2rem;
+    transition: background 0.3s ease;
+}
+
+.filter-btn.active {
+    background-color: var(--accent-color);
+    color: var(--dark-font-color);
 }
 
 footer {
