@@ -18,6 +18,13 @@
     
 }
 
+html, body {
+    height: 100%;
+    margin: 0; /* Remove default margins */
+}
+
+
+
 .title {
     display: grid;
     grid-template-columns: auto auto;
@@ -180,6 +187,7 @@ h1 {
     padding: 0 0 0 1.5rem;
 }
 
+
 .card-top {
     background-color: var(--primary-color);
     color: var(--light-font-color);
@@ -197,14 +205,11 @@ h1 {
     margin: 0;
     padding: 1rem;
     border-radius: 0 0 .5rem .5rem;
-    height: 100%; /* Ensure the card fills available height */
-    flex-grow: 1; /* Allow sections to grow and match height */
+    height: 70%; /* Ensure the card fills available height */
 }
 
 /* Centered text under the image */
 .city-text {
-    text-align: center; /* Centers the text */
-    margin-top: 1rem; /* Adds space between the image and text */
     font-size: 1.2rem; /* Adjust text size */
     color: var(--dark-font-color); /* Adjust text color if needed */
 }
