@@ -91,6 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function displayCourse(filter) {
         courseList.innerHTML = "";  // Clear existing content
+        let totalCredits = 0; 
 
         const filteredCourses = courses.filter(course => filter === "all" || course.subject === filter);
 
@@ -108,9 +109,20 @@ document.addEventListener("DOMContentLoaded", () => {
             button.style.fontSize = "16px";
             button.style.borderRadius = "5px";
 
+            // add combined number of credits that is displayed under displayed courses.
             courseList.appendChild(button);
+
+            // calculate total number of credits
+            totalCredits += course.credits;
+            
         });
+
+            // display total number of credits.
+            const creditsDisplay = document.createElement("p");
+            creditsDisplay.innerHTML = `total Credits: <strong>${totalCredits}</strong>`;
+            courseList.appendChild(creditsDisplay);
     }
+
 
     displayCourse("all");
 
