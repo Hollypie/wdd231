@@ -1,0 +1,24 @@
+
+* {
+    font-family: var(--title-font);
+    font-weight: 500;
+}
+
+:root {
+    --primary-color: #596235;
+    --second-color:  #2F3020;
+    --accent-color: #e98e72;
+    --background-color: #CDCBD6;
+    --light-font-color: white;  
+    --dark-font-color: black;
+
+    --title-font: 'Open Sans';
+    --main-font: 'Open Sans';
+    
+}
+
+footer {
+    padding: 40px;
+    background-color: var(--primary-color) ;
+    color: white;m
+}
