@@ -1,0 +1,20 @@
+@media only screen and (min-width: 38rem) {
+
+    #myButton {
+        display: none;
+    }
+
+    ul.menuLinks, ul.menuLinks.open {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    ul.menuLinks a:hover {
+        background-color: var(--accent-color);
+        color: black;
+    }
+
+    nav {
+        grid-template-rows: 1fr;
+    }
+}
