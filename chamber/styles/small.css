@@ -91,6 +91,11 @@ ul.menuLinks li a {
     text-decoration: none;
 }
 
+ul.menuLinks a:hover {
+    background-color: var(--accent-color);
+    color: black;
+}
+
 li.current-menu-item a {
     background-color: var(--primary-color);
     color: white;
