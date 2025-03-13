@@ -29,30 +29,39 @@
 </head>
 <body>
     <header>
-        <img src="images/facebook_small.png" width="48" height="48">
-        <span>Orem Chamber of Commerce Directory</span>
+        <img src="images/orem.webp" width="100" height="100">
+        <div id="headerTitle">
+            <h1>Orem City</h1>
+            <p>Chamber of Commerce</p>
+        </div>
+        
         <button id="myButton"></button>
     </header>
-        <nav id="animateme">
-            <ul class="menuLinks">
-                <li><a href="#" title="Home">Page One</a></li>
-                <li class="current-menu-item"><a href="directory.html">Directory</a></li>
-                <li><a href="#" title="Service">Page Three</a></li>
-                <li><a href="#" title="History">Page Four</a></li>
-            </ul>
-        </nav>
+    <nav id="animateme">
+        <ul class="menuLinks">
+            <li><a href="#" title="Home">Home</a></li>
+            <li class="current-menu-item"><a href="directory.html">Directory</a></li>
+            <li><a href="#" title="Join">Join</a></li>
+            <li><a href="#" title="Discover">Discover</a></li>
+        </ul>
+    </nav>
     <main>
-
+        <div>
+            <button>Grid</button>
+            <button>List</button>
+        </div>
     </main>
     <footer>
-        <section>
-            <h3>Orem Chamber of Commerce</h3>
-            <p>2696 N. University Ave Suite 220</p>
-            <p>Provo UT 84604</p>
-            <p>Contact Us (385) 482-2555</p>
-            <p>info@thechamber.org</p>
+        <section id="address">
+            <div id="addressText">
+                <h3>Orem Chamber of Commerce</h3>
+                <p>2696 N. University Ave Suite 220</p>
+                <p>Provo UT 84604</p>
+                <p>Contact Us (385) 482-2555</p>
+                <p>info@thechamber.org</p>
+            </div>
         </section>
-        <section>
+        <section id="socialMedia">
             <a href="https://facebook.com/business" target="_blank">
                 <img src="images/facebook_small.png" width="48" alt="Facebook">
             </a>
@@ -63,12 +72,14 @@
                 <img src="images/instagram_small.png" width="48" alt="Instagram">
             </a>
         </section>
-        <section>
-            <p>WDD231 Class Project</p>
-            <p>Holly Briggs</p>
-            <p>2025 Orem Chamber of Commerce</p>
-            <p>©<span id="yearDisplay"></span> Holly Briggs Utah, USA</p>
-            <p id="lastModified"></p>
+        <section id="authorInfo">
+            <div authorInfoText>
+                <p>WDD231 Class Project</p>
+                <p>Holly Briggs</p>
+                <p>2025 Orem Chamber of Commerce</p>
+                <p>©<span id="yearDisplay"></span> Holly Briggs Utah, USA</p>
+                <p id="lastModified"></p>
+            </div>
         </section>
     </footer>
 </body>

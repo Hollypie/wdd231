@@ -19,17 +19,54 @@
 
 header {
     display: grid;
-    grid-template-columns: 44px auto 44px;
+    grid-template-columns: 120px auto auto 44px;
     align-items:end;
     background-color: var(--primary-color);
     color: white;
 
 }
 
+header img {
+    grid-column: 1 / 2;
+    padding: 1rem;
+}
+
+#headerTitle h1 {
+    font-size: 2.4rem;
+    padding: 0;
+    margin: 0;
+}
+
+#headerTitle p {
+    font-size: 1.2rem;
+    padding: 0;
+    margin: 0;
+}
+
+#headerTitle {
+    display: flexbox;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    grid-column: 2 / 3;
+    padding: 1rem;
+}
+
+@media (max-width: 480px) {
+    #headerTitle h1 {
+        font-size: 1.6rem;
+    }
+
+    #headerTitle p {
+        font-size: 0.9rem;
+    }
+}
+
 /* navigation stuff */
 
 nav {
-    background-color: var(--primary-color);
+    grid-column: 3 / 4;
+    background-color: var(--second-color);
 }
 
 #myButton::before {
@@ -48,7 +85,6 @@ nav {
 }
 
 ul.menuLinks li a {
-    border: pink dashed 1px;
     display: block;
     padding: .75rem 2vw;
     color: white;
@@ -56,7 +92,8 @@ ul.menuLinks li a {
 }
 
 li.current-menu-item a {
-    background-color: var(--second-color);
+    background-color: var(--primary-color);
+    color: white;
 }
 
 ul.menuLinks {
@@ -83,5 +120,5 @@ nav.open {
 footer {
     padding: 40px;
     background-color: var(--primary-color) ;
-    color: white;m
+    color: white;
 }
