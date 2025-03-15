@@ -122,6 +122,30 @@ nav.open {
     grid-template-rows: 1fr;
 }
 
+/* styles for the cards on the directory page */
+#cards {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+section {
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #596235;
+    color: white;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+
+img {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+
 footer {
     padding: 40px;
     background-color: var(--primary-color) ;

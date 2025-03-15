@@ -70,3 +70,8 @@ footer {
     align-items: center; /* Centers icons vertically */
     gap: 10px; /* Adds spacing between icons */
 }
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
