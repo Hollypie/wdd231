@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const completedColor = rootStyles.getPropertyValue('--accent-color').trim(); // Remove extra spaces
     const incompleteColor = rootStyles.getPropertyValue('white').trim();
     const fontColor = rootStyles.getPropertyValue('black').trim();
-    const buttonFont = rootStyles.getPropertyValue('--main-font').trim();
         
     const courses = [
         {

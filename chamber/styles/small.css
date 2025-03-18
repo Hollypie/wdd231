@@ -123,27 +123,58 @@ nav.open {
 }
 
 /* styles for the cards on the directory page */
+
+main {
+    display: flexbox;
+}
+
+.filter {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+}
+
+.filter-buttons {
+    border: none;
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: var(--background-color);
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
 #cards {
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-section {
+.filter-buttons.active {
+    background-color: var(--accent-color);
+    color: black;
+}
+
+main section {
     display: flexbox;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #596235;
-    color: white;
+    background-color: var(--background-color);
+    color: black;
     margin: 1rem;
     border-radius: 1rem;
 }
 
-img {
+main h2 {
+    margin: 1rem;
+}
+
+main img {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
     margin-bottom: 2rem;
     margin-left: 1rem;
     margin-right: 1rem;
 }
+
 
 
 footer {
