@@ -14,6 +14,18 @@ async function getBusinessData() {
     }
 }
 
+async function getBusinessDataList() {
+    try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error("Failed to fetch data");
+
+        const data = await response.json();
+        displayBusinessesList(data.businesses);
+    } catch (error) {
+        console.error("Error loading business data:", error);
+    }
+}
+
 getBusinessData();
 
 const displayBusinesses = (businesses) => {
@@ -66,10 +78,52 @@ function displayBusinessesGrid() {
 }
 
 // Function to display businesses in list format
-function displayBusinessesList() {
+function displayBusinessesList(businesses) {
     cards.innerHTML = ""; // Clear existing content
+    let table = document.createElement('table');
+    let tablehead = document.createElement('thead');
+    let titleRow = document.createElement('tr');
+    let businessTitle = document.createElement('th');
+    let addressTitle = document.createElement('th');
+    let phoneTitle = document.createElement('th');
+    let websiteTitle = document.createElement('th');
+    let tBody = document.createElement('tbody');
     
+    cards.appendChild(table);
+    table.appendChild(tablehead);
+    tablehead.appendChild(titleRow);
+    titleRow.appendChild(businessTitle);
+    titleRow.appendChild(addressTitle);
+    titleRow.appendChild(phoneTitle);
+    titleRow.appendChild(websiteTitle);
+    table.appendChild(tBody);
+
+    businesses.forEach((business) => {
+        
+        let businessRow = document.createElement('tr');
+        let name = document.createElement('td');
+        let address = document.createElement('td');
+        let phone = document.createElement('td');
+        let website = document.createElement('td');
+        let link = document.createElement('a');
+
+        tBody.appendChild(businessRow);
+        businessRow.appendChild(name);
+        businessRow.appendChild(address);
+        businessRow.appendChild(phone);
+        businessRow.appendChild(website);
+        website.appendChild(link);
+
+        name.textContent(`${business.name}`);
+        address.textContent(`${business.streetaddress}, ${business.city}, ${business.state}, ${business.zipcode}`);
+        phone.textContent(`${business.phonenumber}`);
+        website.textContent("Website");
+        link.href = `${business.url}`;
+        link.target = "_blank";
+
+    }
     
+
 }
 
 buttons.forEach(button => {
