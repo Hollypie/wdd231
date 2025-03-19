@@ -11,7 +11,8 @@
         "description": "",
         "email": "dragonskeep@gmail.com",
         "url": "https://www.dragonskeep.com/",
-        "imageurl": "https://cdn.prod.website-files.com/6504b0f1e5e7ba6001101c04/659ff5f0d19df2c46af9b1dc_CleanShot%202024-01-11%20at%2007.06.01%402x.png"
+        "imageurl": "https://cdn.prod.website-files.com/6504b0f1e5e7ba6001101c04/659ff5f0d19df2c46af9b1dc_CleanShot%202024-01-11%20at%2007.06.01%402x.png",
+        "membership": 2
       },
       {
         "name": "Barnes and Noble",
@@ -24,7 +25,8 @@
         "description": "",
         "email": "barnesandnoble@gmail.com",
         "url": "https://www.barnesandnoble.com/",
-        "imageurl": "https://simg1.imagesbn.com/pimages/store/photo/lg/2626.jpg"
+        "imageurl": "https://simg1.imagesbn.com/pimages/store/photo/lg/2626.jpg",
+        "membership": 3
       },
       {
         "name": "The Nerd Store",
@@ -37,7 +39,8 @@
         "description": "Specializes in games, collectibles, and hosts regular gaming events",
         "email": "nerdstore@gmail.com",
         "url": "https://www.nerdstoreutah.com",
-        "imageurl": "https://s3-media0.fl.yelpcdn.com/bphoto/V10vPPYap0QPXcgDIBp8pg/348s.jpg"
+        "imageurl": "https://s3-media0.fl.yelpcdn.com/bphoto/V10vPPYap0QPXcgDIBp8pg/348s.jpg",
+        "membership": 1
       },
       {
         "name": "​SCERA Center for the Arts",
@@ -50,7 +53,8 @@
         "description": "Hosts live performances, movies, and art classes.",
         "email": "scera@gmail.com",
         "url": "www.scera.org",
-        "imageurl": "https://www.utahsadventurefamily.com/wp-content/uploads/2014/02/scera_center.jpg"
+        "imageurl": "https://www.utahsadventurefamily.com/wp-content/uploads/2014/02/scera_center.jpg",
+        "membership": 1
       },
       {
         "name": "DVD Game Exchange & Repair",
@@ -63,7 +67,8 @@
         "description": "Store with new and used video games, DVDs, and gaming consoles, plus repair services.",
         "email": "dvdgameexchange@gmail.com",
         "url": "https://www.dvdgameexchange.com",
-        "imageurl": "https://nebula.wsimg.com/25d7263d885fc822ee2812337605ce8b?AccessKeyId=8073CFF26BEDC13A9CD4&disposition=0&alloworigin=1"
+        "imageurl": "https://nebula.wsimg.com/25d7263d885fc822ee2812337605ce8b?AccessKeyId=8073CFF26BEDC13A9CD4&disposition=0&alloworigin=1",
+        "membership": 2
       },
       {
         "name": "Deseret Book",
@@ -76,7 +81,8 @@
         "description": "Deseret Book in Orem offers a variety of books, music, gifts, and religious items, with a focus on faith-based and inspirational materials.",
         "email": "deseretbook@gmail.com",
         "url": "https://www.deseretbook.com",
-        "imageurl": "https://s3-media0.fl.yelpcdn.com/bphoto/cKUvsVpVxsAfK3DmilXZ-Q/l.jpg"
+        "imageurl": "https://s3-media0.fl.yelpcdn.com/bphoto/cKUvsVpVxsAfK3DmilXZ-Q/l.jpg",
+        "membership": 1
       },
       {
         "name": "Bosch Kitchen Center",
@@ -89,7 +95,8 @@
         "description": "Small business ‧ Kitchen supply store in Orem, Utah",
         "email": "boschkitchen@gmail.com",
         "url": "https://www.spoilthecook.com",
-        "imageurl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFp_3FAashfFG9sYAyMGy6fN0vXbPIaKinog&s"
+        "imageurl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFp_3FAashfFG9sYAyMGy6fN0vXbPIaKinog&s",
+        "membership": 2
       }
     ]
   }
