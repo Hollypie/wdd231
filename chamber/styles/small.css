@@ -139,8 +139,8 @@ nav.open {
 
 .cta-container {
     position: absolute;
-    top: 15%;
-    left: 15%;
+    top: 30%;
+    left: 30%;
     transform: translate(-50%, -50%);
     text-align: center;
     opacity: 0;

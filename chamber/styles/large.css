@@ -25,6 +25,12 @@ main {
     margin: 3rem;
 }
 
+.cta-container {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+}
+
 footer {
     display: grid;
     justify-content: space-around;
