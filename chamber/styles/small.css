@@ -175,9 +175,52 @@ main img {
     margin-right: 1rem;
 }
 
+/* This is styling for the businesses list */
+table {
+    width: 80%;
+    max-width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse; /* Removes space between borders */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
 
+th {
+    background-color: var(--accent-color);
+    color: black;
+    padding: 12px;
+    text-align: left;
+    font-size: 1.2em;
+}
+
+td {
+    padding: 10px;
+    
+}
+
+tr:nth-child(odd) {
+    background-color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+tr:hover {
+    background-color: var(--background-color);
+}
+
+td a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
 
 footer {
+    margin-top: 2rem;
     padding: 40px;
     background-color: var(--primary-color) ;
     color: white;

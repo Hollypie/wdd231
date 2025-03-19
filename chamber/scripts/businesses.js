@@ -1,142 +1,124 @@
 const url = "https://hollypie.github.io/wdd231/chamber/businesses.json";
-const cards = document.querySelector('#cards');
+const cards = document.querySelector("#cards");
 const buttons = document.querySelectorAll(".filter-buttons");
 
-async function getBusinessData() {
+// Fetch business data once and store it
+async function fetchBusinessData() {
     try {
         const response = await fetch(url);
         if (!response.ok) throw new Error("Failed to fetch data");
 
         const data = await response.json();
-        displayBusinesses(data.businesses);
+        return data.businesses; // Return businesses array
     } catch (error) {
         console.error("Error loading business data:", error);
+        return []; // Return empty array if fetch fails
     }
 }
 
-async function getBusinessDataList() {
-    try {
-        const response = await fetch(url);
-        if (!response.ok) throw new Error("Failed to fetch data");
+// Display businesses as grid cards
+function displayBusinessesGrid(businesses) {
+    cards.innerHTML = ""; // Clear previous content
+    cards.classList.add("grid-view");
+    cards.classList.remove("list-view");
 
-        const data = await response.json();
-        displayBusinessesList(data.businesses);
-    } catch (error) {
-        console.error("Error loading business data:", error);
-    }
-}
-
-getBusinessData();
-
-const displayBusinesses = (businesses) => {
     businesses.forEach((business) => {
         let card = document.createElement("section");
         let name = document.createElement("h2");
+        let tagline = document.createElement("p");
+        let line = document.createElement("hr");
         let image = document.createElement("img");
-        let address = document.createElement("p");
-        let phoneNumber = document.createElement("p");
         let description = document.createElement("p");
+        let email = document.createElement("p");
+        let phoneNumber = document.createElement("p");
         let businessURL = document.createElement("a");
-        let email = document.createElement('p');
-        let line = document.createElement('hr');
-        let tagline = document.createElement('p');
+        let address = document.createElement("p");
 
-        address.textContent = `${business.streetaddress}, ${business.city}, ${business.state}  ${business.zipcode}`;
-        tagline.textContent = `${business.tagline}`;
-        image.setAttribute('src', business.imageurl);
-        image.setAttribute('loading', 'lazy');
-        image.setAttribute('width', '300');
-        image.setAttribute('height', 'auto');
-        email.textContent = `${business.email}`;
-        name.textContent = `${business.name}`;
-        phoneNumber.textContent = `${business.phonenumber}`;
-        description.textContent = `${business.description}`;
-        businessURL.setAttribute('href', business.url);
+        name.textContent = business.name;
+        tagline.textContent = business.tagline || "";
+        description.textContent = business.description;
+        email.textContent = `Email: ${business.email}`;
+        phoneNumber.textContent = `Phone: ${business.phonenumber}`;
+        address.textContent = `${business.streetaddress}, ${business.city}, ${business.state} ${business.zipcode}`;
+        
+        image.setAttribute("src", business.imageurl);
+        image.setAttribute("loading", "lazy");
+        image.setAttribute("width", "300");
+        image.setAttribute("height", "auto");
+
+        businessURL.href = business.url;
         businessURL.textContent = "Visit Website";
-        businessURL.setAttribute('target', '_blank');
+        businessURL.setAttribute("target", "_blank");
 
-        card.appendChild(name);
-        card.appendChild(tagline);
-        card.appendChild(line);
-        card.appendChild(image);
-        card.appendChild(description);
-        card.appendChild(email);
-        card.appendChild(phoneNumber);
-        card.appendChild(businessURL);
-        card.appendChild(address);
-
+        card.append(name, tagline, line, image, description, email, phoneNumber, businessURL, address);
         cards.appendChild(card);
     });
 }
 
-// Function to display businesses in grid format
-function displayBusinessesGrid() {
-    cards.innerHTML = ""; // Clear existing content
-    cards.classList.add("grid-view");
-    cards.classList.remove("list-view");
-    getBusinessData();
-}
-
-// Function to display businesses in list format
+// Display businesses as a list (table format)
 function displayBusinessesList(businesses) {
-    cards.innerHTML = ""; // Clear existing content
-    let table = document.createElement('table');
-    let tablehead = document.createElement('thead');
-    let titleRow = document.createElement('tr');
-    let businessTitle = document.createElement('th');
-    let addressTitle = document.createElement('th');
-    let phoneTitle = document.createElement('th');
-    let websiteTitle = document.createElement('th');
-    let tBody = document.createElement('tbody');
-    
-    cards.appendChild(table);
-    table.appendChild(tablehead);
-    tablehead.appendChild(titleRow);
-    titleRow.appendChild(businessTitle);
-    titleRow.appendChild(addressTitle);
-    titleRow.appendChild(phoneTitle);
-    titleRow.appendChild(websiteTitle);
-    table.appendChild(tBody);
+    cards.innerHTML = ""; // Clear previous content
+    cards.classList.add("list-view");
+    cards.classList.remove("grid-view");
 
-    businesses.forEach((business) => {
-        
-        let businessRow = document.createElement('tr');
-        let name = document.createElement('td');
-        let address = document.createElement('td');
-        let phone = document.createElement('td');
-        let website = document.createElement('td');
-        let link = document.createElement('a');
+    let table = document.createElement("table");
+    let tableHead = document.createElement("thead");
+    let titleRow = document.createElement("tr");
 
-        tBody.appendChild(businessRow);
-        businessRow.appendChild(name);
-        businessRow.appendChild(address);
-        businessRow.appendChild(phone);
-        businessRow.appendChild(website);
+    ["Business Name", "Address", "Phone", "Website"].forEach(title => {
+        let th = document.createElement("th");
+        th.textContent = title;
+        titleRow.appendChild(th);
+    });
+
+    tableHead.appendChild(titleRow);
+    table.appendChild(tableHead);
+
+    let tBody = document.createElement("tbody");
+    businesses.forEach(business => {
+        let businessRow = document.createElement("tr");
+        let name = document.createElement("td");
+        let address = document.createElement("td");
+        let phone = document.createElement("td");
+        let website = document.createElement("td");
+        let link = document.createElement("a");
+
+        name.textContent = business.name;
+        address.textContent = `${business.streetaddress}, ${business.city}, ${business.state}, ${business.zipcode}`;
+        phone.textContent = business.phonenumber;
+
+        link.href = business.url;
+        link.textContent = "Website";
+        link.target = "_blank";
         website.appendChild(link);
 
-        name.textContent(`${business.name}`);
-        address.textContent(`${business.streetaddress}, ${business.city}, ${business.state}, ${business.zipcode}`);
-        phone.textContent(`${business.phonenumber}`);
-        website.textContent("Website");
-        link.href = `${business.url}`;
-        link.target = "_blank";
+        businessRow.append(name, address, phone, website);
+        tBody.appendChild(businessRow);
+    });
 
-    }
-    
-
+    table.appendChild(tBody);
+    cards.appendChild(table);
 }
 
+// Initialize page with default grid view
+(async function init() {
+    let businesses = await fetchBusinessData();
+    displayBusinessesGrid(businesses); // Show grid by default
+})();
+
+// Event listeners for filter buttons
 buttons.forEach(button => {
-    button.addEventListener("click", () => {
-        buttons.forEach(btn => btn.classList.remove("active")); // removes active from all buttons
-        button.classList.add('active'); // add active to the clicked button
-        const displayType = button.textContent.toLowerCase(); // Get the value (grid or list) based on button text
+    button.addEventListener("click", async () => {
+        buttons.forEach(btn => btn.classList.remove("active")); // Remove active class
+        button.classList.add("active"); // Add active class to clicked button
+
+        let businesses = await fetchBusinessData(); // Ensure data is fetched
+        const displayType = button.textContent.toLowerCase(); // Get button text
 
         if (displayType === "grid") {
-            displayBusinessesGrid();
-        }
-        else if (displayType === "list") {
-            displayBusinessesList();
+            displayBusinessesGrid(businesses);
+        } else if (displayType === "list") {
+            displayBusinessesList(businesses);
         }
     });
 });
