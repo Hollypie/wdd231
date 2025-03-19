@@ -122,3 +122,18 @@ buttons.forEach(button => {
         }
     });
 });
+
+// this function show return an array of businesses that have been filtered to only include the ones with a membership of 2 or 3.
+function getFilteredArray() {
+    
+}
+
+function getRandomBusinesses(arr, count) {
+    let shuffled = arr.sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, count);
+}
+
+function displayfeaturedbusinesses(businesses) {
+    const selectedBusinesses = getRandomBusinesses(businesses, 3)
+
+}
