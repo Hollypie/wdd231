@@ -155,13 +155,13 @@ main h1 {
 
 .cta-button {
     padding: 20px 35px;
-    background-color: var(--accent-color);
-    color: black;
-    font-weight: 800;
-    font-size: 20px;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    font-size: 2em;
     text-decoration: none;
-    border-radius: 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: .2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 50);
     transition: background-color 0.3s;
 }
 
