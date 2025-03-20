@@ -11,9 +11,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const sunset = document.querySelector("#sunset");
     const weatherIcon = document.querySelector("#weather-icon");
     const captionDesc = document.querySelector("figcaption");
+    const today = document.querySelector("#today");
+    const tomorrow = document.querySelector("#tomorrow");
+    const dayAfterTomorrow = document.querySelector("#day-after-tomorrow");
+    const todayDayOfWeek = new Date();
+    const dayOfWeek = todayDayOfWeek.toLocaleString('en-US', { weekday: 'long'});
+
 
     const appid = "dde05de069b95d55b10b570d58412b52";
     const weatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=40.30&lon=-111.70&units=imperial&appid=${appid}`;
+    const forcastURL = `https://api.openweathermap.org/data/2.5/forecast?lat=40.30&lon=-111.70&units=imperial&appid=${appid}`;
 
     async function fetchWeather() {
         try {
@@ -22,11 +29,46 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const data = await response.json();
             console.log("Weather Data:", data);
-
             displayWeather(data);
         } catch (error) {
             console.error("Weather fetch error:", error);
         }
+    }
+
+    async function fetchForcast() {
+        try {
+            const response = await fetch(forcastURL);
+            if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+
+            const forcastData = await response.json();
+            console.log("Forcast Data:", forcastData);
+
+            displayForcast(forcastData);
+        } catch (error) {
+            console.error("Forcast fetch error:", error);
+        }
+    }
+
+    function getTomorrow() {
+        const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+        const tomorrowIndex = (todayDayOfWeek.getDay() + 1) % 7;
+        
+        return daysOfWeek[tomorrowIndex];
+    }
+
+    function getDayAfterTomorrow() {
+        const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+        const dayAfterTomorrowIndex = (todayDayOfWeek.getDay() + 2) % 7;
+        
+        return daysOfWeek[dayAfterTomorrowIndex];
+    }
+
+    function displayForcast(data) {
+        today.innerHTML = `Today: ${data.list[0].main.temp}°F`;
+        tomorrow.innerHTML = `${getTomorrow()}: ${data.list[8].main.temp}°F`;
+        dayAfterTomorrow.innerHTML = `${getDayAfterTomorrow()}: ${data.list[16].main.temp}°F`;
     }
 
     function displayWeather(data) {
@@ -51,17 +93,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     fetchWeather();
+    fetchForcast();
 
     // ==================== FEATURED BUSINESSES SCRIPT ====================
-    const businessURL = "https://hollypie.github.io/wdd231/chamber/businesses.json";
+    const businessURL = "businesses.json";
     const featured = document.querySelector(".featured");
 
     async function fetchBusinessData() {
         try {
+            console.log("Fetching business data...");
             const response = await fetch(businessURL);
             if (!response.ok) throw new Error("Failed to fetch data");
-
+    
             const data = await response.json();
+            console.log("Business data received:", data);
             return data.businesses;
         } catch (error) {
             console.error("Error loading business data:", error);
