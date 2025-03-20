@@ -21,7 +21,7 @@
 
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
-    <script src="scripts/businesses.js" defer></script>
+    <script src="scripts/home.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,32 +42,53 @@
         <ul class="menuLinks">
             <li class="current-menu-item"><a href="index.html" title="Home">Home</a></li>
             <li><a href="directory.html">Directory</a></li>
-            <li><a href="#" title="Join">Join</a></li>
+            <li><a href="join.html" title="Join">Join</a></li>
             <li><a href="#" title="Discover">Discover</a></li>
         </ul>
     </nav>
     <main>
         <div class="hero">
-            <img src="images/hero.webp" alt="Photo of Orem city">
+            <img src="images/hero2.webp" alt="Photo of Orem city">
             <div class="cta-container">
-                <a href="#join-section" class="cta-button">Join Now</a>
-            </div>
-            <h1>Home</h1>
-            <div>
-                <div class="events">
-
-                </div>
-                <div class="weather">
-
-                </div>
-                <div class="forcast">
-
-                </div>
-            </div>
-            <div class="businesses-featured">
-
+                <a href="join.html" class="cta-button">Join Now</a>
             </div>
         </div>
+        <h1>Home</h1>
+            <div class="homeContent">
+                <div class="events hcontent">
+                    <h2>Events</h2>
+                </div>
+                <div class="weather hcontent">
+                    <h2>Current Weather</h2>
+                    <div class="weather-container">
+                        <figure>
+                            <img id="weather-icon" src="" alt="">
+                            <figcaption></figcaption>
+                        </figure>
+                        <div class="weather-data">
+                            <p id="current-temp"></p>
+                            <p id="condition"></p>
+                            <p id="high"></p>
+                            <p id="low"></p>
+                            <p id="humidity"></p>
+                            <p id="sunrise"></p>
+                            <p id="sunset"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="forcast hcontent">
+                    <h2>Weather Forecast</h2>
+                </div>
+
+
+
+                <div class="featured">
+
+                </div>
+
+
+
+            </div>
     </main>
     <footer>
         <section id="address">

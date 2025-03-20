@@ -31,12 +31,12 @@ async function apiFetch() {
 
 function displayResults(data) {
     currentTemp.innerHTML = `${data.main.temp} °F`;
-    condition.innerHTML = `${data.weather.main}`;
+    condition.innerHTML = `${data.weather[0].main}`;
     high.innerHTML = `High: ${data.main.temp_max}`;
     low.innerHTML = `Low: ${data.main.temp_min}`;
-    humidity.innerHTML = `Humidity: ${data.humidity}`;
-    sunrise.innerHTML = `${data.sys.sunrise}`;
-    sunset.innerHTML = `${data.sys.sunset}`;
+    humidity.innerHTML = `Humidity: ${data.main.humidity}`;
+    sunrise.innerHTML = `Sunrise: ${convertTimestamp(data.sys.sunrise)}`;
+    sunset.innerHTML = `Sunset: ${convertTimestamp(data.sys.sunset)}`;
 
     const iconCode = data.weather[0].icon;
     const iconURL = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
@@ -45,6 +45,11 @@ function displayResults(data) {
     weatherIcon.setAttribute("alt", data.weather[0].description);
     
     captionDesc.textContent = data.weather[0].description;
+}
+
+function convertTimestamp(timestamp) {
+    const date = new Date(timestamp * 1000);
+    return date.toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit" });
 }
 
 apiFetch();
