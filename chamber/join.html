@@ -1,1 +1,107 @@
-<!--  -->
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chamber of Commerce Directory Page">
+    <meta name="author" content="Holly Briggs">
+    <title>Orem Chamber of Commerce</title>
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Open graph meta tags for social media -->
+    <meta property="og:title" content=" Orem Chamber of Commerce Directory Page">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://static1.squarespace.com/static/602d89283d9bab5833fa17af/60303db61dfc976fbdcce1a5/63dab2234ad2614010d425ca/1678906102427/Orem+aerial+view.jpg?format=1500w">
+    <meta property="og:description" content="Orem Chamber of Commerce Directory Page">
+    <meta property="og:url" content="https://hollypie.github.io/wdd231/chamber/directory.html">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css" media="(min-width: 768px)">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <img src="images/orem_small.webp" width="100" height="100" alt="Orem Chamber of Commerce logo">
+        <div id="headerTitle">
+            <h1>Orem City</h1>
+            <p>Chamber of Commerce</p>
+        </div>
+        
+        <button id="myButton"><span class="visually-hidden">menu</span></button>
+    </header>
+    <nav id="animateme">
+        <ul class="menuLinks">
+            <li><a href="index.html" title="Home">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li class="current-menu-item"><a href="join.html" title="Join">Join</a></li>
+            <li><a href="#" title="Discover">Discover</a></li>
+        </ul>
+    </nav>
+    <main>
+                <!-- A modal dialog containing a form -->
+        <dialog id="favDialog">
+            <form>
+            <p>
+                <label>
+                Favorite animal:
+                <select>
+                    <option value="default">Choose…</option>
+                    <option>Brine shrimp</option>
+                    <option>Red panda</option>
+                    <option>Spider monkey</option>
+                </select>
+                </label>
+            </p>
+            <div>
+                <button value="cancel" formmethod="dialog">Cancel</button>
+                <button id="confirmBtn" value="default">Confirm</button>
+            </div>
+            </form>
+        </dialog>
+        <p>
+            <button id="showDialog">Show the dialog</button>
+        </p>
+        <output></output>
+    </main>
+    <footer>
+        <section id="address">
+            <div id="addressText">
+                <h3>Orem Chamber of Commerce</h3>
+                <p>2696 N. University Ave Suite 220</p>
+                <p>Provo UT 84604</p>
+                <p>Contact Us (385) 482-2555</p>
+                <p>info@thechamber.org</p>
+            </div>
+        </section>
+        <section id="socialMedia">
+            <a href="https://facebook.com/business" target="_blank">
+                <img src="images/facebook_small.png" width="48" alt="Facebook">
+            </a>
+            <a href="https://twitter.com/business" target="_blank">
+                <img src="images/twitter_small.png" width="48" alt="Twitter">
+            </a>
+            <a href="https://instagram.com/business" target="_blank">
+                <img src="images/instagram_small.png" width="48" alt="Instagram">
+            </a>
+        </section>
+        <section id="authorInfo">
+            <div class=authorInfoText>
+                <p>WDD231 Class Project</p>
+                <p>Holly Briggs</p>
+                <p>2025 Orem Chamber of Commerce</p>
+                <p>©<span id="yearDisplay"></span> Holly Briggs Utah, USA</p>
+                <p id="lastModified"></p>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>
