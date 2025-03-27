@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Chamber of Commerce Directory Page">
+    <meta name="description" content="Chamber of Commerce Join Page">
     <meta name="author" content="Holly Briggs">
     <title>Orem Chamber of Commerce</title>
     <link rel="icon" href="favicon.ico">
@@ -12,12 +12,15 @@
     <meta property="og:title" content=" Orem Chamber of Commerce Directory Page">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://static1.squarespace.com/static/602d89283d9bab5833fa17af/60303db61dfc976fbdcce1a5/63dab2234ad2614010d425ca/1678906102427/Orem+aerial+view.jpg?format=1500w">
-    <meta property="og:description" content="Orem Chamber of Commerce Directory Page">
-    <meta property="og:url" content="https://hollypie.github.io/wdd231/chamber/directory.html">
+    <meta property="og:description" content="Orem Chamber of Commerce Join Page">
+    <meta property="og:url" content="https://hollypie.github.io/wdd231/chamber/join.html">
 
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css" media="(min-width: 768px)">
+    <link rel="stylesheet" href="styles/join_small.css">
+    <link rel="stylesheet" href="styles/join_large.css" media="(min-width: 768px)">
+    
 
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
@@ -30,7 +33,9 @@
 </head>
 <body>
     <header>
-        <img src="images/orem_small.webp" width="100" height="100" alt="Orem Chamber of Commerce logo">
+        <a href="index.html">
+            <img src="images/orem_small.webp" width="100" height="100" alt="Orem Chamber of Commerce logo">
+        </a>
         <div id="headerTitle">
             <h2>Orem City</h2>
             <p>Chamber of Commerce</p>
@@ -48,30 +53,68 @@
     </nav>
     <main>
         <h1>Join</h1>
-                <!-- A modal dialog containing a form -->
-        <dialog id="favDialog">
-            <form>
-            <p>
-                <label>
-                Favorite animal:
-                <select>
-                    <option value="default">Choose…</option>
-                    <option>Brine shrimp</option>
-                    <option>Red panda</option>
-                    <option>Spider monkey</option>
-                </select>
-                </label>
-            </p>
-            <div>
-                <button value="cancel" formmethod="dialog">Cancel</button>
-                <button id="confirmBtn" value="default">Confirm</button>
+        <div class="join-container">
+            <div class="form-container">
+                <h2>Membership Application Form</h2>
+                <form method="GET" action="thanks.html">
+                    <label for="first">First Name:</label>
+                    <input type="text" id="first" name="first" required autocomplete="given-name">
+    
+                    <label for="last">Last Name:</label>
+                    <input type="text" id="last" name="last" required autocomplete="family-name">
+    
+                    <label for="title">Organizational Title:</label>
+                    <input type="text" id="title" name="title" required pattern="^[A-Za-z\s-]{7,}$" title="Name must be at least 7 characters, and can only contain letters, spaces, and hyphens.">
+    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required autocomplete="email">
+    
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required autocomplete="tel">
+    
+                    <label for="organization">Business/Organization Name:</label>
+                    <input type="text" id="organization" name="organization" required autocomplete="organization">
+    
+                    <label for="membership" required>Membership Level:</label>
+                    <select id="membership" name="membership">
+                        <option value="" disabled selected>-- Select a Membership Level --</option>
+                        <option value="np">Non-Profit membership  (Free)</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+    
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" title="description"></textarea>
+    
+                    <input type="hidden" id="timestamp" name="timestamp">
+    
+                    <button type="submit">Sign up for Membership</button>
+                </form>
             </div>
-            </form>
-        </dialog>
-        <p>
-            <button id="showDialog">Show the dialog</button>
-        </p>
-        <output></output>
+            
+            <div  class="membership-cards">
+                <div>
+                    <h2>Membership Levels</h2>
+                    <div class="membership-card">
+                        <p>Non Profit Membership Level</p>
+                        <button>Learn More</button>
+                    </div>
+                    <div class="membership-card">
+                        <p>Bronze Membership Level</p>
+                        <button>Learn More</button>
+                    </div>
+                    <div class="membership-card">
+                        <p>Silver Membership Level</p>
+                        <button>Learn More</button>
+                    </div>
+                    <div class="membership-card">
+                        <p>Gold Membership Level</p>
+                        <button>Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <section id="address">

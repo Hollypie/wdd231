@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Chamber of Commerce Directory Page">
     <meta name="author" content="Holly Briggs">
-    <title>Orem Chamber of Commerce Directory</title>
+    <title>Thankyou for Joining Orem Chamber of Commerce</title>
     <link rel="icon" href="favicon.ico">
 
     <!-- Open graph meta tags for social media -->
@@ -13,21 +14,23 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://static1.squarespace.com/static/602d89283d9bab5833fa17af/60303db61dfc976fbdcce1a5/63dab2234ad2614010d425ca/1678906102427/Orem+aerial+view.jpg?format=1500w">
     <meta property="og:description" content="Orem Chamber of Commerce Directory Page">
-    <meta property="og:url" content="https://hollypie.github.io/wdd231/chamber/directory.html" />
+    <meta property="og:url" content="https://hollypie.github.io/wdd231/chamber/directory.html">
 
     <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/join.com">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css" media="(min-width: 768px)">
+    
 
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
-    <script src="scripts/businesses.js" defer></script>
+    <script src="scripts/join.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-
 </head>
+
 <body>
     <header>
         <a href="index.html">
@@ -42,22 +45,22 @@
     </header>
     <nav id="animateme">
         <ul class="menuLinks">
-            <li><a href="./index.html" title="Home">Home</a></li>
-            <li class="current-menu-item"><a href="directory.html">Directory</a></li>
-            <li><a href="join.html" title="Join">Join</a></li>
+            <li><a href="index.html" title="Home">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li class="current-menu-item"><a href="join.html" title="Join">Join</a></li>
             <li><a href="#" title="Discover">Discover</a></li>
         </ul>
     </nav>
     <main>
-        <h1>Orem Chamber of Commerce Directory</h1>
-        <div>
-            <div class="filter">
-                <button class="filter-buttons active" value="grid">Grid</button>
-                <button class="filter-buttons" value="list">List</button>
-            </div>
-            <div id="cards"></div>
-        </div>
+        <h1>"Thank you for filling out the form and joining the Orem Chamber of Commerce! We’re excited to have you as part of our community and look forward to working together."</h1>
+        <button><a href="index.html">Return</button>
+
+        <div id="results"></div>
+
     </main>
+
+
+
     <footer>
         <section id="address">
             <div id="addressText">
