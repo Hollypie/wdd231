@@ -8,10 +8,25 @@
 .form-container {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .membership-cards {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+form {
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+}
+
+
+
 

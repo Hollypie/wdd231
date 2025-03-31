@@ -57,35 +57,43 @@
             <div class="form-container">
                 <h2>Membership Application Form</h2>
                 <form method="GET" action="thanks.html">
-                    <label for="first">First Name:</label>
-                    <input type="text" id="first" name="first" required autocomplete="given-name">
+                    <label for="first">First Name:
+                        <input type="text" id="first" name="first" required autocomplete="given-name">
+                    </label>    
+                
+                    <label for="last">Last Name:
+                        <input type="text" id="last" name="last" required autocomplete="family-name">
+                    </label>
+
+                    <label for="title">Organizational Title:
+                        <input type="text" id="title" name="title" required pattern="^[A-Za-z\s-]{7,}$" title="Name must be at least 7 characters, and can only contain letters, spaces, and hyphens.">
+                    </label>
     
-                    <label for="last">Last Name:</label>
-                    <input type="text" id="last" name="last" required autocomplete="family-name">
+                    <label for="email">Email:
+                        <input type="email" id="email" name="email" required autocomplete="email">
+                    </label>
     
-                    <label for="title">Organizational Title:</label>
-                    <input type="text" id="title" name="title" required pattern="^[A-Za-z\s-]{7,}$" title="Name must be at least 7 characters, and can only contain letters, spaces, and hyphens.">
+                    <label for="phone">Phone Number:
+                        <input type="tel" id="phone" name="phone" required autocomplete="tel">
+                    </label>
     
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required autocomplete="email">
+                    <label for="organization">Business/Organization Name:
+                        <input type="text" id="organization" name="organization" required autocomplete="organization">
+                    </label>
     
-                    <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone" required autocomplete="tel">
+                    <label for="membership" required>Membership Level:
+                        <select id="membership" name="membership">
+                            <option value="" disabled selected>-- Select a Membership Level --</option>
+                            <option value="np">Non-Profit membership  (Free)</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </select>
+                    </label>
     
-                    <label for="organization">Business/Organization Name:</label>
-                    <input type="text" id="organization" name="organization" required autocomplete="organization">
-    
-                    <label for="membership" required>Membership Level:</label>
-                    <select id="membership" name="membership">
-                        <option value="" disabled selected>-- Select a Membership Level --</option>
-                        <option value="np">Non-Profit membership  (Free)</option>
-                        <option value="bronze">Bronze Membership</option>
-                        <option value="silver">Silver Membership</option>
-                        <option value="gold">Gold Membership</option>
-                    </select>
-    
-                    <label for="description">Description:</label>
-                    <textarea id="description" name="description" title="description"></textarea>
+                    <label for="description">Description:
+                        <textarea id="description" name="description" title="description"></textarea>
+                    </label>
     
                     <input type="hidden" id="timestamp" name="timestamp">
     
@@ -115,6 +123,14 @@
                 </div>
             </div>
         </div>
+        <!-- Membership Details Modal -->
+        <dialog id="membershipModal">
+            <div class="modal-content">
+                <h2 id="modalTitle"></h2>
+                <p id="modalDescription"></p>
+                <button id="closeModal">Close</button>
+            </div>
+        </dialog>
     </main>
     <footer>
         <section id="address">
