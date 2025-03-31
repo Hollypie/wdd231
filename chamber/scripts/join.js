@@ -40,3 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
       modal.close();
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("timestamp").value = new Date().toISOString();
+});
