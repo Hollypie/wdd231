@@ -3,25 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Chamber of Commerce Directory Page">
+    <meta name="description" content="Chamber of Commerce Discover Page">
     <meta name="author" content="Holly Briggs">
-    <title>Orem Chamber of Commerce</title>
+    <title>Orem Chamber of Commerce Discover</title>
     <link rel="icon" href="favicon.ico">
 
     <!-- Open graph meta tags for social media -->
-    <meta property="og:title" content=" Orem Chamber of Commerce Directory Page">
+    <meta property="og:title" content=" Orem Chamber of Commerce Discover Page">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://static1.squarespace.com/static/602d89283d9bab5833fa17af/60303db61dfc976fbdcce1a5/63dab2234ad2614010d425ca/1678906102427/Orem+aerial+view.jpg?format=1500w">
-    <meta property="og:description" content="Orem Chamber of Commerce Directory Page">
-    <meta property="og:url" content="https://hollypie.github.io/wdd231/chamber/directory.html">
+    <meta property="og:description" content="Orem Chamber of Commerce Discover Page">
+    <meta property="og:url" content="https://hollypie.github.io/wdd231/chamber/discover.html">
 
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css" media="(min-width: 768px)">
+    <link rel="stylesheet" href="styles/discover_small.css">
+    <link rel="stylesheet" href="styles/discover_large.css" media="(min-width: 768px)">
+    
 
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
-    <script src="scripts/home.js" defer></script>
+    <script src="scripts/discover.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,60 +45,15 @@
     </header>
     <nav id="animateme">
         <ul class="menuLinks">
-            <li class="current-menu-item"><a href="index.html" title="Home">Home</a></li>
+            <li><a href="index.html" title="Home">Home</a></li>
             <li><a href="directory.html">Directory</a></li>
             <li><a href="join.html" title="Join">Join</a></li>
-            <li><a href="discover.html" title="Discover">Discover</a></li>
+            <li class="current-menu-item"><a href="discover.html" title="Discover">Discover</a></li>
         </ul>
     </nav>
     <main>
-        <div class="hero">
-            <img src="images/hero2.webp" alt="Photo of Orem city">
-            <div class="cta-container">
-                <a href="join.html" class="cta-button"> Grow Your Business - Join Now</a>
-            </div>
-        </div>
-        <h1>Home</h1>
-            <div class="homeContent">
-                <div class="events hcontent">
-                    <h2>Events</h2>
-                </div>
-                <div class="weather hcontent">
-                    <h2>Current Weather</h2>
-                    <div class="weather-container">
-                        <figure>
-                            <img id="weather-icon" src="https://via.placeholder.com/100" alt="Weather icon">
-                            <figcaption></figcaption>
-                        </figure>
-                        <div class="weather-data">
-                            <h3 id="current-temp"></h3>
-                            <p id="condition"></p>
-                            <p id="high"></p>
-                            <p id="low"></p>
-                            <p id="humidity"></p>
-                            <p id="sunrise"></p>
-                            <p id="sunset"></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="forcast hcontent">
-                    <h2>Weather Forecast</h2>
-                    <div class="forcast-data">
-                        <h3 id="today"></h3>
-                        <h3 id="tomorrow"></h3>
-                        <h3 id="day-after-tomorrow"></h3>
-                    </div>
-                </div>
-
-
-
-                <div class="featured">
-
-                </div>
-
-
-
-            </div>
+        <h1>Discover</h1>
+        
     </main>
     <footer>
         <section id="address">
@@ -108,6 +66,7 @@
             </div>
         </section>
         <section id="socialMedia">
+            <h3 class="visually-hidden">Social Media</h3>
             <a href="https://facebook.com/business" target="_blank">
                 <img src="images/facebook_small.png" width="48" alt="Facebook">
             </a>
@@ -120,6 +79,7 @@
         </section>
         <section id="authorInfo">
             <div class=authorInfoText>
+                <h3 class="visually-hidden">Author Info</h3>
                 <p>WDD231 Class Project</p>
                 <p>Holly Briggs</p>
                 <p>2025 Orem Chamber of Commerce</p>
