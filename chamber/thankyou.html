@@ -26,6 +26,7 @@
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
     <script src="scripts/join.js" defer></script>
+    <script src="scripts/thankyou.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,7 +49,7 @@
         <ul class="menuLinks">
             <li><a href="index.html" title="Home">Home</a></li>
             <li><a href="directory.html">Directory</a></li>
-            <li class="current-menu-item"><a href="join.html" title="Join">Join</a></li>
+            <li><a href="join.html" title="Join">Join</a></li>
             <li><a href="#" title="Discover">Discover</a></li>
         </ul>
     </nav>
@@ -56,6 +57,18 @@
         <div class="thanks">
             <h1>"Thank you for filling out the form and joining the Orem Chamber of Commerce! We’re excited to have you as part of our community and look forward to working together."</h1>
             <button><a href="index.html">Return</button>
+            
+                <section class="submitted-info">
+                    <h2>Submitted Information</h2>
+                    <ul>
+                        <li><strong>First Name:</strong> <span id="firstName"></span></li>
+                        <li><strong>Last Name:</strong> <span id="lastName"></span></li>
+                        <li><strong>Email:</strong> <span id="email"></span></li>
+                        <li><strong>Mobile Number:</strong> <span id="phone"></span></li>
+                        <li><strong>Business Name:</strong> <span id="business"></span></li>
+                        <li><strong>Submission Time:</strong> <span id="timestamp"></span></li>
+                    </ul>
+                </section>
         </div>
         
 
