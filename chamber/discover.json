@@ -4,49 +4,58 @@
         "name": "​SCERA Park & SCERA Pool",
         "address": "600 S State St, Orem, UT 84058",
         "description": "SCERA Park is a spacious community park featuring open fields, picnic areas, and a playground. It's home to the SCERA Pool, a public outdoor swimming facility with slides and a splash pad, perfect for families during the summer months. The park is also a great spot for local events, sports, and casual gatherings",
-        "url": "https://www.oremrecreation.com/scerapool/"
+        "url": "https://www.oremrecreation.com/scerapool/",
+        "photo": "scera_pool.webp"
       },
       {
         "name": "Hale Center Theater",
         "address": "225 W 400 N, Orem, UT 84057",
         "description": "This intimate, professional-quality theater has been a staple of Orem’s arts scene for decades. Known for its engaging musicals and plays, Hale Center Theater Orem provides a unique theater-in-the-round experience, ensuring that every seat offers a great view of the stage. It’s a beloved venue for families and theater enthusiasts alike.",
-        "url": "https://hct.org/Online/default.asp"
+        "url": "https://hct.org/Online/default.asp",
+        "photo": "hale_theater.webp"
+
       },
       {
         "name": "Utah Valley University (UVU)",
         "address": "800 W University Pkwy, Orem, UT 84058",
         "description": "Utah Valley University (UVU) is one of the largest public universities in Utah, offering a wide range of academic programs. Known for its hands-on learning approach, UVU also hosts public events, lectures, and performances. The beautiful campus features green spaces, modern facilities, and the striking Roots of Knowledge stained-glass exhibit.",
-        "url": "https://www.uvu.edu/"
+        "url": "https://www.uvu.edu/",
+        "photo": "uvu.webp"
       },
       {
         "name": "Orem Public Library",
         "address": "58 N State St, Orem, UT 84057",
         "description": "A cornerstone of the community, the Orem Public Library offers an extensive collection of books, movies, and educational resources. It frequently hosts events such as storytime for children, book clubs, and art exhibits. The library’s spacious and welcoming environment makes it a favorite spot for both study and leisure reading.",
-        "url": "https://oremlibrary.org/"
+        "url": "https://oremlibrary.org/",
+        "photo": "library.webp"
       },
       {
         "name": "All Together Playground",
         "address": "200 E 100 S, Orem, UT 84058",
         "description": "Designed for children of all abilities, All Together Playground is an inclusive play area that ensures fun for kids with disabilities as well as their peers. Built through community effort, this innovative playground features ramps, swings, and interactive elements that encourage creativity and play for everyone.",
-        "url": "https://www.utahsadventurefamily.com/all-together-playground-orem/"
+        "url": "https://www.utahsadventurefamily.com/all-together-playground-orem/",
+        "photo": "all_together_park.webp"
       },
       {
         "name": "Orem Summerfest",
         "address": "City Center Park, 300 E Center St, Orem, UT 84057",
         "description": "Orem’s annual Summerfest is a city-wide celebration filled with parades, carnival rides, fireworks, and community activities. Held every June, the festival brings together residents and visitors for a weekend of fun, food, and entertainment. It's one of the city’s most anticipated events of the year.",
-        "url": "https://oremfest.org/"
+        "url": "https://oremfest.org/",
+        "photo": "summerfest.webp"
       },
       {
         "name": "Murdock Canal Trail",
         "address": "Multiple Access Points in Orem (Main Trailhead: 800 E 800 N, Orem, UT 84097)",
         "description": "A scenic paved trail perfect for biking, jogging, and walking, the Murdock Canal Trail stretches across Utah County and offers breathtaking views of the Wasatch Mountains. The well-maintained pathway connects several parks and neighborhoods, making it a popular choice for outdoor enthusiasts looking for a peaceful and safe route.",
-        "url": "https://www.alltrails.com/trail/us/utah/murdock-canal-trail--2"
+        "url": "https://www.alltrails.com/trail/us/utah/murdock-canal-trail--2",
+        "photo": "canal_trail.webp"
       },
       {
         "name": "Classic Skating & Fun Center",
         "address": "250 S State St, Orem, UT 84058",
         "description": "A nostalgic favorite for families and teens, Classic Skating & Fun Center offers a retro roller-skating experience combined with modern attractions like laser tag, bounce houses, and an arcade. The rink hosts themed skate nights, birthday parties, and special events, making it a lively entertainment destination for all ages.",
-        "url": "https://classicfun.com/"
+        "url": "https://classicfun.com/",
+        "photo": "classic_skating.webp"
       }
     ]
   }
