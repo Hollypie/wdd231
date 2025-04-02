@@ -13,7 +13,6 @@ async function fetchDiscoverData() {
         return [];
     }
 }
-
 function displayDiscoverCards(items) {
     cards.innerHTML = "";
     
@@ -23,7 +22,7 @@ function displayDiscoverCards(items) {
         let line = document.createElement('hr');
         let address = document.createElement("p");
         let description = document.createElement("p");
-        let itemUrl = document.createElement("a");
+        let itemUrl = document.createElement("a"); // Change from button to just an anchor
         let photo = document.createElement("img");
 
         name.textContent = item.name;
@@ -32,16 +31,16 @@ function displayDiscoverCards(items) {
         itemUrl.href = item.url;
         itemUrl.textContent = "Visit Website";
         itemUrl.setAttribute("target", "_blank");
+        itemUrl.classList.add("btn"); // Apply button styles to the link
 
         photo.setAttribute("src", `images/discover/${item.photo}`);
         photo.setAttribute("loading", "lazy");
         photo.setAttribute("width", "300");
         photo.setAttribute("height", "200");
 
-        card.append(name, line, address, description, photo, itemUrl);
+        card.append(name, line, address, description, photo, itemUrl); // Remove `urlButton`
         cards.appendChild(card);
     });
-
 }
 
 (async function init() {
