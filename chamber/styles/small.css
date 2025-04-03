@@ -286,7 +286,7 @@ main {
 }
 
 main section {
-    display: flex;
+    display: flexbox;
     justify-content: center;
     align-items: center;
     text-align: center;
