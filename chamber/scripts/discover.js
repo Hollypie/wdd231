@@ -59,6 +59,7 @@ function displayDiscoverCards(items) {
         address.textContent = item.address;
         description.textContent = item.description;
         itemUrl.href = item.url;
+        itemUrl.setAttribute("alt", `link to ${item.name}`);
         itemUrl.textContent = "Learn More";
         itemUrl.setAttribute("target", "_blank");
         itemUrl.classList.add("btn"); // Apply button styles to the link
