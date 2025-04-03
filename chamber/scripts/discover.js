@@ -1,3 +1,34 @@
+// Get the current visit count from localStorage
+let visitCount = localStorage.getItem("visitCount");
+const now = new Date();
+const nowTimestamp = now.getTime();
+
+let lastVisit = localStorage.getItem("lastVisit");
+
+let message = "";
+
+if (!lastVisit) {
+    message = "Welcome! Let us know if you have any questions."
+} else {
+    lastVisit = parseInt(lastVisit);
+    const timeDifference = nowTimestamp - lastVisit;
+    const oneDay = 24 * 60 * 60 * 1000;
+
+    if (timeDifference < oneDay) {
+        message = "Back so soon! Awesome!"
+    } else {
+        const daysAgo = Math.floor(timeDifference / oneDay);
+        message = `You last visited ${daysAgo} days ago.`;
+    }
+}
+
+document.getElementById("visitMessage").textContent = message;
+
+localStorage.setItem("lastVisit", nowTimestamp);
+
+
+
+
 const url = "discover.json";
 const cards = document.querySelector("#cards");
 
@@ -29,7 +60,7 @@ function displayDiscoverCards(items) {
         address.textContent = item.address;
         description.textContent = item.description;
         itemUrl.href = item.url;
-        itemUrl.textContent = "Visit Website";
+        itemUrl.textContent = "Learn More";
         itemUrl.setAttribute("target", "_blank");
         itemUrl.classList.add("btn"); // Apply button styles to the link
 
@@ -48,5 +79,5 @@ function displayDiscoverCards(items) {
     displayDiscoverCards(items);
 })();
 
-fetchDiscoverData().then(displayDiscoverCards);
+
 

@@ -443,3 +443,8 @@ dialog button {
     padding: .5rem 1rem;
     border: 1px solid rgb(0 0 0 / 0.1);
 }
+
+/* message displays on discover.html */
+#visitMessage {
+    margin: 1rem;
+}
