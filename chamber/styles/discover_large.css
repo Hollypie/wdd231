@@ -1,8 +1,4 @@
-@media only screen and (min-width: 64rem) {
-
-    .discoverCards {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
+.discoverCards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
