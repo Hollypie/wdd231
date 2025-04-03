@@ -443,21 +443,3 @@ dialog button {
     padding: .5rem 1rem;
     border: 1px solid rgb(0 0 0 / 0.1);
 }
-
-/* button styling for button on discover page */
-.btn {
-    display: inline-block; /* Ensure it behaves like a button */
-    padding: 10px 20px;
-    background-color: var(--primary-color);
-    border-radius: 5px;
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    margin-top: 10px; /* Ensure spacing */
-}
-
-.btn:hover {
-    background-color: var(--accent-color);
-    color: black;
-}

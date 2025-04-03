@@ -50,32 +50,27 @@
             <li><a href="index.html" title="Home">Home</a></li>
             <li><a href="directory.html">Directory</a></li>
             <li><a href="join.html" title="Join">Join</a></li>
-            <li><a href="#" title="Discover">Discover</a></li>
+            <li><a href="discover.html" title="Discover">Discover</a></li>
         </ul>
     </nav>
     <main class="thanks-container">
         <div class="thanks">
             <h1>"Thank you for filling out the form and joining the Orem Chamber of Commerce! We’re excited to have you as part of our community and look forward to working together."</h1>
-            <button><a href="index.html">Return</button>
-            
-                <section class="submitted-info">
-                    <h2>Submitted Information</h2>
-                    <ul>
-                        <li><strong>First Name:</strong> <span id="firstName"></span></li>
-                        <li><strong>Last Name:</strong> <span id="lastName"></span></li>
-                        <li><strong>Email:</strong> <span id="email"></span></li>
-                        <li><strong>Mobile Number:</strong> <span id="phone"></span></li>
-                        <li><strong>Business Name:</strong> <span id="business"></span></li>
-                        <li><strong>Submission Time:</strong> <span id="timestamp"></span></li>
-                    </ul>
-                </section>
+            <button><a href="index.html">Return</a></button>
         </div>
-        
-
-        <div id="results"></div>
+        <div id="results">
+            <section class="submitted-info">
+                <h2>Submitted Information</h2>
+                <p>First Name: <span id="firstName">Not provided</span></p>
+                <p>Last Name: <span id="lastName">Not provided</span></p>
+                <p>Email: <span id="email">Not provided</span></p>
+                <p>Phone Number: <span id="phone">Not provided</span></p>
+                <p>Business Name: <span id="business">Not provided</span></p>
+                <p>Submission Time: <span id="submissionTime">Not provided</span></p>
+            </section>
+        </div>
 
     </main>
-
 
 
     <footer>
@@ -89,6 +84,7 @@
             </div>
         </section>
         <section id="socialMedia">
+            <h3 class="visually-hidden">Social Media</h3>
             <a href="https://facebook.com/business" target="_blank">
                 <img src="images/facebook_small.png" width="48" alt="Facebook">
             </a>
@@ -101,6 +97,7 @@
         </section>
         <section id="authorInfo">
             <div class=authorInfoText>
+                <h3 class="visually-hidden">Author Info</h3>
                 <p>WDD231 Class Project</p>
                 <p>Holly Briggs</p>
                 <p>2025 Orem Chamber of Commerce</p>
