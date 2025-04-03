@@ -9,3 +9,7 @@
 .discover img {
     width: 300px;
 }
+
+.photo:hover {
+    border: 3px dotted black;
+}

@@ -1,4 +1,14 @@
-.discoverCards {
+#discoverCards {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 1rem; /* Adjust spacing between cards */
+    padding: 1rem;
+}
+
+.discover {
+
+    padding: 1rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
 }
