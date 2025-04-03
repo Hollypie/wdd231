@@ -120,3 +120,7 @@ footer {
 .featured section {
     width: 400px;
 }
+
+.photo:hover {
+    border: 3px dotted white;
+}
