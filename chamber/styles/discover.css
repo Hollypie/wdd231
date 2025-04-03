@@ -1,11 +1,36 @@
-#cards section {
-    min-height: 300px; /* Adjust as needed */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Ensures even spacing */
-    padding: 1rem;
+
+
+.discover {
+    border-radius: .5rem;
+    overflow: hidden;
+    display: grid;
+    grid-template-areas: 
+    "name"
+    "photo"
+    "address"
+    "description"
+    "learn";
 }
 
+div .discover h2 {
+    grid-area: name;
+}
+
+div .discover img {
+    grid-area: photo;
+}
+
+div .discover p {
+    grid-area: description;
+}
+
+div .discover p:nth-of-type(2) {
+    grid-area: address;
+}
+
+div .discover a {
+    grid-area: learn;
+}
 /* button styling for button on discover page */
 .btn {
     display: inline-block; /* Ensure it behaves like a button */

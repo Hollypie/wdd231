@@ -1,0 +1,11 @@
+.discover {
+    grid-template-areas: 
+    "photo name"
+    "photo address"
+    "photo description"
+    "photo learn";
+}
+
+.discover img {
+    width: 300px;
+}

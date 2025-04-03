@@ -45,12 +45,11 @@ async function fetchDiscoverData() {
     }
 }
 function displayDiscoverCards(items) {
-    cards.innerHTML = "";
+    discoverCards.innerHTML = "";
     
     items.forEach((item) => {
         let card = document.createElement("section");
         let name = document.createElement("h2");
-        let line = document.createElement('hr');
         let address = document.createElement("p");
         let description = document.createElement("p");
         let itemUrl = document.createElement("a"); // Change from button to just an anchor
@@ -63,15 +62,17 @@ function displayDiscoverCards(items) {
         itemUrl.textContent = "Learn More";
         itemUrl.setAttribute("target", "_blank");
         itemUrl.classList.add("btn"); // Apply button styles to the link
+        card.setAttribute("class", "discover");
 
         photo.setAttribute("src", `images/discover/${item.photo}`);
         photo.setAttribute("loading", "lazy");
         photo.setAttribute("width", "300");
         photo.setAttribute("height", "200");
         photo.setAttribute("class", "photo");
+        photo.setAttribute("alt", `Photo of ${item.name}`);
 
-        card.append(name, line, address, description, photo, itemUrl); // Remove `urlButton`
-        cards.appendChild(card);
+        card.append(photo, name, address, description, itemUrl); // Remove `urlButton`
+        discoverCards.appendChild(card);
     });
 }
 
