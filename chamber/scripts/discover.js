@@ -68,6 +68,7 @@ function displayDiscoverCards(items) {
         photo.setAttribute("loading", "lazy");
         photo.setAttribute("width", "300");
         photo.setAttribute("height", "200");
+        photo.setAttribute("class", "photo");
 
         card.append(name, line, address, description, photo, itemUrl); // Remove `urlButton`
         cards.appendChild(card);
