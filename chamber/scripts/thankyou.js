@@ -4,8 +4,8 @@ function getQueryParam(param) {
     return params.get(param) || "Not provided";
 }
 
-document.getElementById("firstName").textContent = getQueryParam("first");
-document.getElementById("lastName").textContent = getQueryParam("last");
+document.getElementById("first").textContent = getQueryParam("first");
+document.getElementById("last").textContent = getQueryParam("last");
 document.getElementById("email").textContent = getQueryParam("email");
 document.getElementById("phone").textContent = getQueryParam("phone");
 document.getElementById("business").textContent = getQueryParam("organization");
