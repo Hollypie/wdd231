@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Board Game Search</title>
+</head>
+<body>
+  <h1>Search for Expansions</h1>
+  <p>Enter the name of your favorite board game to see a list of expansions and versions of it.</p>
+  <form id="searchForm">
+    <input type="text" id="gameName" placeholder="Enter board game name" required />
+    <button type="submit">Search</button>
+  </form>
+
+  <div id="results"></div>
+
+  <script>
+    const proxyUrl = "http://localhost:8080/"; // Optional: If you need a proxy server
+    const baseUrl = "https://www.boardgamegeek.com/xmlapi2/search?type=boardgame&query=";
+
+    // Event listener for form submission
+    document.getElementById("searchForm").addEventListener("submit", function(e) {
+      e.preventDefault(); // Prevent page reload
+
+      const query = document.getElementById("gameName").value.trim();
+      if (!query) return;
+
+      const url = proxyUrl + baseUrl + encodeURIComponent(query); // Construct the API URL
+
+      fetch(url)
+        .then(response => response.text()) // Fetching the data as text (XML)
+        .then(xmlString => {
+          const parser = new DOMParser();
+          const xmlDoc = parser.parseFromString(xmlString, "text/xml"); // Parse XML response
+          const items = xmlDoc.getElementsByTagName("item"); // Get all 'item' elements
+
+          const resultsDiv = document.getElementById("results");
+          resultsDiv.innerHTML = ""; // Clear previous results
+
+          if (items.length === 0) {
+            resultsDiv.textContent = "No results found."; // Display message if no games found
+            return;
+          }
+
+          // Loop through each game in the API response
+          for (let item of items) {
+            const name = item.getElementsByTagName("name")[0].getAttribute("value"); // Get game name
+            const id = item.getAttribute("id"); // Get game ID
+
+            // Create a div to display each game result
+            const gameDiv = document.createElement("div");
+            gameDiv.innerHTML = `<strong>${name}</strong> (ID: ${id})`;
+            resultsDiv.appendChild(gameDiv); // Append game result to the results div
+          }
+        })
+        .catch(error => {
+          console.error("Error fetching data:", error);
+          document.getElementById("results").textContent = "Something went wrong."; // Handle errors
+        });
+    });
+  </script>
+</body>
+</html>

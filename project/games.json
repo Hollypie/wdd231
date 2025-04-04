@@ -1006,6 +1006,104 @@
       "year": 2013,
       "publisher": "Gamewright",
       "themes": ["Food", "Card Game"]
+    },
+    {
+      "id": 141,
+      "name": "Mansions of Madness",
+      "players": "2-5",
+      "min_players": 2,
+      "max_players": 5,
+      "complexity": "heavy",
+      "genres": ["cooperative", "adventure"],
+      "mechanics": ["exploration", "action points", "storytelling"],
+      "length": "120",
+      "year": 2016,
+      "publisher": "Fantasy Flight Games",
+      "themes": ["Horror", "Investigation"]
+    },
+    {
+      "id": 183850,
+      "name": "Stuffed Fables",
+      "players": "2-4",
+      "min_players": 2,
+      "max_players": 4,
+      "complexity": "medium",
+      "genres": ["cooperative", "adventure"],
+      "mechanics": ["campaign", "storytelling", "exploration"],
+      "length": "45-60",
+      "year": 2018,
+      "publisher": "Plaid Hat Games",
+      "themes": ["Fantasy", "Toys"]
+    },
+    {
+      "id": 120692,
+      "name": "Mice and Mystics",
+      "players": "1-4",
+      "min_players": 1,
+      "max_players": 4,
+      "complexity": "medium",
+      "genres": ["cooperative", "adventure"],
+      "mechanics": ["campaign", "storytelling", "tile placement"],
+      "length": "60-90",
+      "year": 2012,
+      "publisher": "Plaid Hat Games",
+      "themes": ["Fantasy", "Mice", "Adventure"]
+    },
+    {
+        "id": 193461,
+        "name": "Chronicles of Crime",
+        "players": "1-4",
+        "min_players": 1,
+        "max_players": 4,
+        "complexity": "medium",
+        "genres": ["cooperative", "detective"],
+        "mechanics": ["storytelling", "app-integration", "crime-solving"],
+        "length": "60",
+        "year": 2018,
+        "publisher": "Lucky Duck Games",
+        "themes": ["Crime", "Investigation"]
+    },
+    {
+        "id": 278191,
+        "name": "Floriferous",
+        "players": "2-4",
+        "min_players": 2,
+        "max_players": 4,
+        "complexity": "light",
+        "genres": ["strategy", "family"],
+        "mechanics": ["set-collection", "tile-placement"],
+        "length": "30-45",
+        "year": 2021,
+        "publisher": "Calendars",
+        "themes": ["Gardening", "Nature"]
+    },
+    {
+        "id": 17,
+        "name": "Uno",
+        "players": "2-10",
+        "min_players": 2,
+        "max_players": 10,
+        "complexity": "light",
+        "genres": ["family", "party"],
+        "mechanics": ["set-collection", "hand-management"],
+        "length": "30",
+        "year": 1971,
+        "publisher": "Mattel",
+        "themes": ["Card Game", "Color Matching"]
+    },
+    {
+        "id": 12340,
+        "name": "Herbaceous",
+        "players": "2-4",
+        "min_players": 2,
+        "max_players": 4,
+        "complexity": "light",
+        "genres": ["family", "strategy"],
+        "mechanics": ["set-collection", "drafting"],
+        "length": "30",
+        "year": 2017,
+        "publisher": "Pandasaurus Games",
+        "themes": ["Gardening", "Nature"]
     }
-  ]
-  
+]
+    
