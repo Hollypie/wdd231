@@ -1,0 +1,123 @@
+
+
+@media only screen and (min-width: 38rem) {
+
+    #myButton {
+        display: none;
+    }
+
+    ul.menuLinks, ul.menuLinks.open {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    ul.menuLinks a:hover {
+        background-color: var(--accent-color);
+        color: black;
+    }
+
+    nav {
+        grid-template-rows: 1fr;
+    }
+}
+
+
+
+.cta-container {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+}
+
+footer {
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center; /* Ensures all sections are vertically centered */
+    text-align: left; /* Default text alignment */
+}
+
+#address {
+    grid-column: 1 / 2;
+}
+
+#socialMedia {
+    grid-column: 2 / 3;
+    display: flex;
+    justify-content: center; /* Centers the icons horizontally */
+    align-items: center; /* Centers them vertically */
+    gap: 10px; /* Adds space between icons */
+}
+
+#authorInfo {
+    grid-column: 3 / 4;
+}
+
+#address, #authorInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers the entire block vertically */
+    align-items: center; /* Centers the block itself in the div */
+    width: 100%; /* Ensures full width for alignment control */
+}
+
+#address p, #authorInfo p, #address h3 {
+    margin: 2px 0; /* Reduces space between lines */
+    line-height: 1.2; /* Adjusts spacing within each paragraph */
+    text-align: left; /* Ensures text remains left-aligned */
+    width: max-content; /* Ensures the block wraps around content width */
+}
+
+#address h3 {
+    margin-bottom: 5px; /* Reduces space below the heading */
+}
+
+#socialMedia {
+    display: flex;
+    justify-content: center; /* Centers icons horizontally */
+    align-items: center; /* Centers icons vertically */
+    gap: 10px; /* Adds spacing between icons */
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.featured {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.homeContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: .5rem;
+    margin: 0 1rem 0 1rem;
+}
+
+.events {
+    grid-row: 1 / 2;
+    grid-column: 1 / 3;
+}
+
+.weather {
+    grid-row: 1 / 2;
+    grid-column: 3 / 4;
+}
+
+.forcast {
+    grid-row: 1 / 2;
+    grid-column: 4 / 5;
+}
+
+.featured {
+    grid-row: 2 / 3;
+    grid-column: 1 / 5;
+}
+
+.featured section {
+    width: 400px;
+}
+

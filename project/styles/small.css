@@ -1,0 +1,451 @@
+
+* {
+    font-family: var(--title-font);
+    font-weight: 500;
+}
+
+:root {
+    --primary-color: #016492;
+    --second-color:  #00415f;
+    --accent-color: #e98e72;
+    --background-color: #CDCBD6;
+    --light-font-color: white;  
+    --dark-font-color: black;
+
+    --title-font: 'Open Sans';
+    --main-font: 'Open Sans';
+    
+}
+
+header {
+    display: grid;
+    grid-template-columns: 120px auto auto 44px;
+    align-items:end;
+    background-color: var(--primary-color);
+    color: white;
+
+}
+
+header img {
+    grid-column: 1 / 2;
+    padding: 1rem;
+}
+
+#headerTitle h1 {
+    font-size: 2.4rem;
+    padding: 0;
+    margin: 0;
+}
+
+#headerTitle p {
+    font-size: 1.2rem;
+    padding: 0;
+    margin: 0;
+}
+
+#headerTitle {
+    display: flex;
+    flex-direction: column;  /* Stack elements vertically */
+    align-items: flex-start; /* Align elements to the left */
+    text-align: left; /* Ensure text is aligned to the left */
+    justify-content: center; /* Center items vertically */
+    grid-column: 2 / 3;
+    height: 100%; /* Ensure it takes up the full height of its parent container */
+    padding: 1rem;
+}
+
+@media (max-width: 480px) {
+    #headerTitle h1 {
+        font-size: 1.6rem;
+    }
+
+    #headerTitle p {
+        font-size: 0.9rem;
+    }
+}
+
+/* navigation stuff */
+
+nav {
+    grid-column: 3 / 4;
+    background-color: var(--second-color);
+}
+
+#myButton::before {
+    content: "\2630";
+}
+
+#myButton {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    text-align: right;
+    padding: .25rem 2vw;
+}
+
+ul.menuLinks li a {
+    display: block;
+    padding: .75rem 2vw;
+    color: white;
+    text-decoration: none;
+}
+
+ul.menuLinks a:hover {
+    background-color: var(--accent-color);
+    color: black;
+}
+
+li.current-menu-item a {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+ul.menuLinks {
+    list-style-type: none;
+}
+
+/* CSS for the open class */
+#myButton.open::before {
+    content: "x";
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+nav {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-out;
+}
+
+nav ul {overflow: hidden;}
+
+nav.open {
+    grid-template-rows: 1fr;
+}
+
+main h1 {
+    padding-left: 1rem;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+
+.cta-container {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.hero:hover .cta-container {
+    opacity: 1;
+}
+
+.cta-button {
+    padding: 20px 35px;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    font-size: 2em;
+    text-decoration: none;
+    border-radius: .2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 50);
+    transition: background-color 0.3s;
+}
+
+main div img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+
+.filter {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+}
+
+.filter-buttons {
+    border: none;
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: var(--background-color);
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+#cards {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.filter-buttons.active {
+    background-color: var(--accent-color);
+    color: black;
+}
+
+/* clickable button styling */
+
+.filter-btn {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 5px;
+    cursor: pointer;
+}
+
+/* Basic styling for active filter button */
+.filter-btn.active {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Basic styling for course buttons */
+.course-btn {
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    text-align: left;
+}
+
+/* For completed courses */
+.course-btn.completed {
+    background-color: green;
+    color: white;
+}
+
+/* For incomplete courses */
+.course-btn.incomplete {
+    background-color: yellow;
+    color: black;
+}
+
+/* Basic styling for course details dialog */
+#course-details {
+    display: none;
+    padding: 20px;
+    background-color: white;
+    width: 400px;
+    border: 2px solid #ccc;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+/* Basic styling for close button in dialog */
+#close-button {
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Hide dialog when it's not displayed */
+#course-details[open] {
+    display: block;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin: 0;
+    padding: 0;
+}
+
+main section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--background-color);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    color: black;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+
+main h2 {
+    margin: 1rem;
+}
+
+main img {
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/* This is styling for the businesses list */
+table {
+    width: 80%;
+    max-width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse; /* Removes space between borders */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+th {
+    background-color: var(--accent-color);
+    color: black;
+    padding: 12px;
+    text-align: left;
+    font-size: 1.2em;
+}
+
+td {
+    padding: 10px;
+    
+}
+
+tr:nth-child(odd) {
+    background-color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+tr:hover {
+    background-color: var(--background-color);
+}
+
+td a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+/* home page styling */
+
+.hero {
+    margin: 0;
+    padding: 0;
+}
+
+.hero img {
+    margin: 0;
+    padding: 0;
+}
+
+.weather {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Ensures h2 is left-aligned */    
+}
+
+.weather h2 {
+    margin-bottom: 1rem; /* Ensures spacing below the title */
+}
+
+.weather-container {
+    display: flex;
+    align-items: center; /* Aligns items vertically */
+}
+
+.weather-container figure {
+    display: flex;
+    flex-direction: column;
+}
+
+.featured img {
+    box-shadow: none;
+}
+
+.featured section {
+    
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hcontent {
+    background-color: var(--background-color);
+    width: 90%;
+    margin: 1rem;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+#weather-icon {
+    width: 100px;
+    background: white;
+}
+
+.forcast-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+figcaption {
+    text-align: center;
+}
+
+footer {
+    margin-top: 2rem;
+    padding: 40px;
+    background-color: var(--primary-color) ;
+    color: white;
+}
+
+dialog {
+    border: 1px solid rgb(0 0 0 / 0.1);
+    border-radius: .25rem;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 3rem #777;
+    width: 90%;
+    max-width: 600px;
+}
+
+::backdrop {
+    background-color: rgb(0 0 0 / 0.5);
+}
+
+dialog button {
+    position: absolute;
+    top: 23px;
+    right: 23px;
+    padding: .5rem 1rem;
+    border: 1px solid rgb(0 0 0 / 0.1);
+}
+
+/* message displays on discover.html */
+#visitMessage {
+    margin: 1rem;
+}
+

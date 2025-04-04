@@ -1,0 +1,42 @@
+Board Game Finder
+Find the perfect board game for your group!
+
+Number of Players:
+🔘 1
+🔘 2
+🔘 3-4
+🔘 5-6
+🔘 7+
+
+Complexity Level (Weight):
+🔘 Light (Easy to learn, quick play)
+🔘 Medium (Some strategy, moderate rules)
+🔘 Heavy (Deep strategy, complex rules)
+
+Game Genre:
+⬜ Cooperative
+⬜ Strategy
+⬜ Party
+⬜ Family
+⬜ Thematic
+⬜ Abstract
+⬜ Deckbuilding
+⬜ War
+
+Game Mechanics:
+⬜ Area Control
+⬜ Drafting
+⬜ Worker Placement
+⬜ Set Collection
+⬜ Hidden Roles
+⬜ Tile Placement
+⬜ Trick-Taking
+⬜ Roll & Write
+
+Game Length:
+🔘 Under 30 minutes
+🔘 30-60 minutes
+🔘 1-2 hours
+🔘 2+ hours
+
+[ Find Games ] (Submit Button)

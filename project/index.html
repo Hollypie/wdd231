@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chamber of Commerce Discover Page">
+    <meta name="author" content="Holly Briggs">
+    <title>Orem Chamber of Commerce Discover</title>
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Open graph meta tags for social media -->
+    <meta property="og:title" content=" Orem Chamber of Commerce Discover Page">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://static1.squarespace.com/static/602d89283d9bab5833fa17af/60303db61dfc976fbdcce1a5/63dab2234ad2614010d425ca/1678906102427/Orem+aerial+view.jpg?format=1500w">
+    <meta property="og:description" content="Orem Chamber of Commerce Discover Page">
+    <meta property="og:url" content="https://hollypie.github.io/wdd231/chamber/discover.html">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css" media="(min-width: 768px)">    
+    <link rel="stylesheet" href="styles/form.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/visits.js" defer></script>
+    <script src="scripts/app.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <!-- <a href="index.html">
+            <img src="images/orem_small.webp" width="120" height="120" alt="Orem Chamber of Commerce logo">
+        </a> -->
+        <div id="headerTitle">
+            <h2>Orem City</h2>
+            <p>Chamber of Commerce</p>
+        </div>
+        
+        <button id="myButton"><span class="visually-hidden">menu</span></button>
+    </header>
+    <nav id="animateme">
+        <ul class="menuLinks">
+            <li class="current-menu-item"><a href="index.html" title="Home">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html" title="Join">Join</a></li>
+            <li><a href="discover.html" title="Discover">Discover</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Board Game Finder</h1>
+        <p id="visitMessage"></p>
+        <div id="finder">
+            <form method="GET" action="recommendations.html">
+                <fieldset>
+                    <legend>Number of Players:</legend>
+                    <label><input type="radio" name="players" value="1" checked> 1</label><br>
+                    <label><input type="radio" name="players" value="2"> 2</label><br>
+                    <label><input type="radio" name="players" value="3-4"> 3-4</label><br>
+                    <label><input type="radio" name="players" value="5-6"> 5-6</label><br>
+                    <label><input type="radio" name="players" value="7+"> 7+</label>
+                </fieldset>
+            
+                <fieldset>
+                    <legend>Complexity Level (Weight):</legend>
+                    <label><input type="radio" name="complexity" value="light" checked> Light (Easy to learn, quick play)</label><br>
+                    <label><input type="radio" name="complexity" value="medium"> Medium (Some strategy, moderate rules)</label><br>
+                    <label><input type="radio" name="complexity" value="heavy"> Heavy (Deep strategy, complex rules)</label><br>
+                </fieldset>
+            
+                <fieldset>
+                    <legend>Game Genre</legend>
+                    <label><input type="checkbox" name="genre[]" value="cooperative"> Cooperative</label><br>
+                    <label><input type="checkbox" name="genre[]" value="strategy"> Strategy</label><br>
+                    <label><input type="checkbox" name="genre[]" value="party"> Party</label><br>
+                    <label><input type="checkbox" name="genre[]" value="family"> Family</label><br>
+                    <label><input type="checkbox" name="genre[]" value="thematic"> Thematic</label><br>
+                    <label><input type="checkbox" name="genre[]" value="abstract"> Abstract</label><br>
+                    <label><input type="checkbox" name="genre[]" value="deck-building"> Deckbuilding</label><br>
+                    <label><input type="checkbox" name="genre[]" value="war"> War</label>
+                </fieldset>
+            
+                <fieldset>
+                    <legend>Game Mechanics:</legend>
+                    <label><input type="checkbox" name="mechanics[]" value="area-control"> Area Control</label><br>
+                    <label><input type="checkbox" name="mechanics[]" value="drafting"> Drafting</label><br>
+                    <label><input type="checkbox" name="mechanics[]" value="worker-placement"> Worker Placement</label><br>
+                    <label><input type="checkbox" name="mechanics[]" value="set-collection"> Set Collection</label><br>
+                    <label><input type="checkbox" name="mechanics[]" value="hidden-roles"> Hidden Roles</label><br>
+                    <label><input type="checkbox" name="mechanics[]" value="tile-placement"> Tile Placement</label><br>
+                    <label><input type="checkbox" name="mechanics[]" value="trick-taking"> Trick-Taking</label><br>
+                    <label><input type="checkbox" name="mechanics[]" value="roll-and-write"> Roll & Write</label>
+                </fieldset>
+            
+                <fieldset>
+                    <legend>Game Length</legend>
+                    <label><input type="radio" name="length" value="under-30" checked> Under 30 minutes</label><br>
+                    <label><input type="radio" name="length" value="30-60"> 30-60 minutes</label><br>
+                    <label><input type="radio" name="length" value="1-2-hours"> 1-2 hours</label><br>
+                    <label><input type="radio" name="length" value="2-plus-hours"> 2+ hours</label><br>
+                </fieldset>
+            
+                <button type="submit" style="padding: 10px 20px; font-size: 16px;">Find Games</button>
+            </form>
+        </div>
+        <div id="results"></div>
+        
+    </main>
+    <footer>
+        <section id="address">
+            <div id="addressText">
+                <h3>Orem Chamber of Commerce</h3>
+                <p>2696 N. University Ave Suite 220</p>
+                <p>Provo UT 84604</p>
+                <p>Contact Us (385) 482-2555</p>
+                <p>info@thechamber.org</p>
+            </div>
+        </section>
+        <!-- <section id="socialMedia">
+            <h3 class="visually-hidden">Social Media</h3>
+            <a href="https://facebook.com/business" target="_blank">
+                <img src="images/facebook_small.png" height="48" width="48" alt="Facebook">
+            </a>
+            <a href="https://twitter.com/business" target="_blank">
+                <img src="images/twitter_small.png" width="48" height="48" alt="Twitter">
+            </a>
+            <a href="https://instagram.com/business" target="_blank">
+                <img src="images/instagram_small.png" width="48" height="48" alt="Instagram">
+            </a>
+        </section> -->
+        <section id="authorInfo">
+            <div class=authorInfoText>
+                <h3 class="visually-hidden">Author Info</h3>
+                <p>WDD231 Class Project</p>
+                <p>Holly Briggs</p>
+                <p>2025 Orem Chamber of Commerce</p>
+                <p>©<span id="yearDisplay"></span> Holly Briggs Utah, USA</p>
+                <p id="lastModified"></p>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>
