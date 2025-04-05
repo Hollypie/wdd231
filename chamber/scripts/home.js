@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
             address.textContent = `${business.streetaddress}, ${business.city}, ${business.state} ${business.zipcode}`;
 
             image.setAttribute("src", business.imageurl);
-            image.setAttribute("alt", `Logo of ${business.name}`);
+            image.setAttribute("alt", `image of ${business.name}`);
             image.setAttribute("loading", "lazy");
             image.setAttribute("width", "300");
             image.setAttribute("height", "auto");
