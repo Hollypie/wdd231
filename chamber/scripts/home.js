@@ -149,7 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
             image.setAttribute("alt", `image of ${business.name}`);
             image.setAttribute("loading", "lazy");
             image.setAttribute("width", "300");
-            image.setAttribute("height", "auto");
+            image.setAttribute("height", "250");
             image.onerror = () => { image.src = "images/default-business.jpg"; };
 
             businessURL.href = business.url.startsWith("http") ? business.url : `https://${business.url}`;

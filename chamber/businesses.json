@@ -11,7 +11,7 @@
         "description": "",
         "email": "dragonskeep@gmail.com",
         "url": "https://www.dragonskeep.com/",
-        "imageurl": "images/directory/dragons.png",
+        "imageurl": "images/directory/dragons.webp",
         "membership": 2
       },
       {
@@ -25,7 +25,7 @@
         "description": "",
         "email": "barnesandnoble@gmail.com",
         "url": "https://www.barnesandnoble.com/",
-        "imageurl": "images/directory/barnes.jpg",
+        "imageurl": "images/directory/barnes.webp",
         "membership": 3
       },
       {
@@ -39,7 +39,7 @@
         "description": "Specializes in games, collectibles, and hosts regular gaming events",
         "email": "nerdstore@gmail.com",
         "url": "https://www.nerdstoreutah.com",
-        "imageurl": "images/directory/nerd.jpg",
+        "imageurl": "images/directory/nerd.webp",
         "membership": 2
       },
       {
@@ -53,7 +53,7 @@
         "description": "Hosts live performances, movies, and art classes.",
         "email": "scera@gmail.com",
         "url": "https://www.scera.org",
-        "imageurl": "images/directory/scera.jpeg",
+        "imageurl": "images/directory/scera.webp",
         "membership": 1
       },
       {
@@ -67,7 +67,7 @@
         "description": "Store with new and used video games, DVDs, and gaming consoles, plus repair services.",
         "email": "dvdgameexchange@gmail.com",
         "url": "https://www.dvdgameexchange.com",
-        "imageurl": "images/directory/dvd.jpg",
+        "imageurl": "images/directory/dvd.webp",
         "membership": 2
       },
       {
@@ -81,7 +81,7 @@
         "description": "Deseret Book in Orem offers a variety of books, music, gifts, and religious items, with a focus on faith-based and inspirational materials.",
         "email": "deseretbook@gmail.com",
         "url": "https://www.deseretbook.com",
-        "imageurl": "images/directory/deseret.jpg",
+        "imageurl": "images/directory/deseret.webp",
         "membership": 2
       },
       {
@@ -95,7 +95,7 @@
         "description": "Small business ‧ Kitchen supply store in Orem, Utah",
         "email": "boschkitchen@gmail.com",
         "url": "https://www.spoilthecook.com",
-        "imageurl": "images/directory/bosch.jpg",
+        "imageurl": "images/directory/bosch.webp",
         "membership": 2
       }
     ]

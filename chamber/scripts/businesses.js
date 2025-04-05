@@ -44,7 +44,7 @@ function displayBusinessesGrid(businesses) {
         image.setAttribute("src", business.imageurl);
         image.setAttribute("loading", "lazy");
         image.setAttribute("width", "300");
-        image.setAttribute("height", "auto");
+        image.setAttribute("height", "200");
 
         businessURL.href = business.url;
         businessURL.textContent = "Visit Website";
