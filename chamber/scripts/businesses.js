@@ -1,4 +1,4 @@
-const url = "https://hollypie.github.io/wdd231/chamber/businesses.json";
+const url = "businesses.json";
 const cards = document.querySelector("#cards");
 const buttons = document.querySelectorAll(".filter-buttons");
 
