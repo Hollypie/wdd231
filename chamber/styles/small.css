@@ -153,8 +153,8 @@ main h1 {
 
 .cta-container {
     position: absolute;
-    top: 30%;
-    left: 30%;
+    top: 22%;
+    left: 10%;
     transform: translate(-50%, -50%);
     text-align: center;
     opacity: 0;
@@ -166,11 +166,11 @@ main h1 {
 }
 
 .cta-button {
-    padding: 20px 35px;
+    padding: 10px;
     background-color: black;
     color: white;
     font-weight: 600;
-    font-size: 2em;
+    font-size: 1em;
     text-decoration: none;
     border-radius: .2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 50);
@@ -286,7 +286,7 @@ main {
 }
 
 main section {
-    display: flex;
+    display: flexbox;
     justify-content: center;
     align-items: center;
     text-align: center;

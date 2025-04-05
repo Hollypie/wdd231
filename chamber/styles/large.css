@@ -21,13 +21,15 @@
     }
 }
 
-
-
 .cta-container {
-    position: absolute;
     top: 15%;
-    left: 15%;
+    left: 10%;
 }
+
+.cta-button {
+    font-size: 2em;
+}
+
 
 footer {
     display: grid;
