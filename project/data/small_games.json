@@ -1,0 +1,815 @@
+[
+  {
+    "id": 70323,
+    "name": "King of Tokyo",
+    "players": "2-6",
+    "min_players": 2,
+    "max_players": 6,
+    "complexity": "light",
+    "genres": [
+      "party",
+      "strategy"
+    ],
+    "mechanics": [
+      "dice-rolling",
+      "area-control"
+    ],
+    "length": "30",
+    "year": 2011,
+    "publisher": "Iello",
+    "themes": [
+      "Monsters",
+      "Battle"
+    ],
+    "imageUrl": "https://cf.geekdo-images.com/m_RzXpHURC0_xLkvRSR_sw__original/img/hSvWgiRYJCTTuoLOWTW3c8sYtl8=/0x0/filters:format(jpeg)/pic3043734.jpg",
+    "review": "A chaotic and fun dice-rolling brawl that’s perfect for groups who enjoy battling for monster supremacy.",
+    "rating": "7/10"
+  },
+  {
+    "id": 366013,
+    "name": "Heat: Pedal to the Metal",
+    "players": "2-6",
+    "min_players": 2,
+    "max_players": 6,
+    "complexity": "medium",
+    "genres": [
+      "strategy",
+      "racing"
+    ],
+    "mechanics": [
+      "hand-management",
+      "racing"
+    ],
+    "length": "45-60",
+    "year": 2022,
+    "publisher": "Days of Wonder",
+    "themes": [
+      "Racing",
+      "Cars"
+    ],
+    "imageUrl": "https://cf.geekdo-images.com/-vOrd4bOspibyohYExLqWg__original/img/iXU8a9WaVlwrkiEiOxWN06y9y5g=/0x0/filters:format(png)/pic6940449.png",
+    "review": "A fast-paced racing game that brilliantly simulates high-speed strategy with surprising depth.",
+    "rating": "8/10"
+  },
+  {
+    "id": 342070,
+    "name": "Thunder Road: Vendetta",
+    "players": "2-6",
+    "min_players": 2,
+    "max_players": 6,
+    "complexity": "medium",
+    "genres": [
+      "strategy",
+      "racing"
+    ],
+    "mechanics": [
+      "area-control",
+      "combat",
+      "racing"
+    ],
+    "length": "45-60",
+    "year": 2021,
+    "publisher": "Restoration Games",
+    "themes": [
+      "Racing",
+      "Combat"
+    ],
+    "imageUrl": "https://cf.geekdo-images.com/l0bFsrGy_cfKRK6YW_dG-g__original/img/XsxovE47zCq8N2VSIybKgiEh9dg=/0x0/filters:format(png)/pic8586892.png",
+    "review": "Mad Max vibes meet thrilling car combat. Destructive, wild, and full of cinematic moments.",
+    "rating": "8/10"
+  },
+  {
+    "id": 146312,
+    "name": "Ghost Fighting Treasure Hunters",
+    "players": "2-4",
+    "min_players": 2,
+    "max_players": 4,
+    "complexity": "light",
+    "genres": [
+      "cooperative",
+      "family"
+    ],
+    "mechanics": [
+      "cooperative",
+      "action points"
+    ],
+    "length": "30",
+    "year": 2013,
+    "publisher": "HABA",
+    "themes": [
+      "Ghosts",
+      "Treasure Hunting"
+    ],
+    "imageUrl": "https://cf.geekdo-images.com/2IQdeGbxKaS0LxllRQal4w__original/img/lNxubEdIZg5DWyLIxBNOIBaaMP4=/0x0/filters:format(jpeg)/pic3518338.jpg",
+    "review": "A fantastic family co-op game with just the right mix of strategy and spooky fun.",
+    "rating": "7/10"
+  },
+  {
+    "id": 148203,
+    "name": "Dutch Blitz",
+    "players": "2-4",
+    "min_players": 2,
+    "max_players": 4,
+    "complexity": "light",
+    "genres": [
+      "party",
+      "family"
+    ],
+    "mechanics": [
+      "card game",
+      "set collection"
+    ],
+    "length": "30",
+    "year": 1989,
+    "publisher": "Dutch Blitz Inc.",
+    "themes": [
+      "Speed",
+      "Card Game"
+    ],
+    "imageUrl": "https://cf.geekdo-images.com/ipuSaHTjxDpXAee-3vttiA__original/img/oyPs5ZLZb6e2g_8nA0uZAOKE4EM=/0x0/filters:format(jpeg)/pic336418.jpg",
+    "review": "Lightning-fast card chaos that's addictive and best with competitive players.",
+    "rating": "6/10"
+  },
+  {
+    "id": 2243,
+    "name": "Yahtzee",
+    "players": "2-6",
+    "min_players": 2,
+    "max_players": 6,
+    "complexity": "light",
+    "genres": [
+      "party",
+      "family"
+    ],
+    "mechanics": [
+      "dice-rolling",
+      "push-your-luck"
+    ],
+    "length": "30",
+    "year": 1956,
+    "publisher": "Hasbro",
+    "themes": [
+      "Dice",
+      "Luck"
+    ],
+    "imageUrl": "https://cf.geekdo-images.com/dp-pJkUemCjhrwi9QItrPA__original/img/eeYPdva8ti4Hi2PYxkTLRPrtfKk=/0x0/filters:format(jpeg)/pic378237.jpg",
+    "review": "A classic dice game of luck and probability. Still holds up for a casual roll-off.",
+    "rating": "5/10"
+  },
+  {
+    "id": 133473,
+    "name": "Sushi Go!",
+    "players": "2-5",
+    "min_players": 2,
+    "max_players": 5,
+    "complexity": "light",
+    "genres": [
+      "family",
+      "party"
+    ],
+    "mechanics": [
+      "set collection",
+      "card drafting"
+    ],
+    "length": "15",
+    "year": 2013,
+    "publisher": "Gamewright",
+    "themes": [
+      "Food",
+      "Card Game"
+    ],
+    "imageUrl": "https://cf.geekdo-images.com/Fn3PSPZVxa3YurlorITQ1Q__original/img/5vRsn2TT9eJmq27i9HtLWKpB_xs=/0x0/filters:format(jpeg)/pic1900075.jpg",
+    "review": "Cute and quick drafting game with surprisingly tasty strategy for all ages.",
+    "rating": "7/10"
+  },
+  {
+    "id": 83330,
+    "name": "Mansions of Madness",
+    "players": "2-5",
+    "min_players": 2,
+    "max_players": 5,
+    "complexity": "heavy",
+    "genres": [
+      "cooperative",
+      "adventure"
+    ],
+    "mechanics": [
+      "exploration",
+      "action points",
+      "storytelling"
+    ],
+    "length": "120",
+    "year": 2016,
+    "publisher": "Fantasy Flight Games",
+    "themes": [
+      "Horror",
+      "Investigation"
+    ],
+    "imageUrl": "https://cf.geekdo-images.com/JtjGOgkaIxnLUeoV56cWFQ__original/img/47Cef6w56t2Vomn6bO8aT5p1ZiI=/0x0/filters:format(jpeg)/pic814011.jpg",
+    "review": "Immersive and chilling, this app-driven Lovecraftian adventure is heavy but rewarding.",
+    "rating": "9/10"
+  },
+  {
+    "id": 233312,
+    "name": "Stuffed Fables",
+    "players": "2-4",
+    "min_players": 2,
+    "max_players": 4,
+    "complexity": "medium",
+    "genres": [
+      "cooperative",
+      "adventure"
+    ],
+    "mechanics": [
+      "campaign",
+      "storytelling",
+      "exploration"
+    ],
+    "length": "45-60",
+    "year": 2018,
+    "publisher": "Plaid Hat Games",
+    "themes": [
+      "Fantasy",
+      "Toys"
+    ],
+    "imageUrl": "https://cf.geekdo-images.com/CS83e1WOA5WMc4izRw6zwg__original/img/t8rrl-N63ofmYHV3_QTNGtkywOk=/0x0/filters:format(jpeg)/pic3708878.jpg",
+    "review": "A heartfelt story-driven game where plush toys protect their child. Unique and emotional.",
+    "rating": "8/10"
+  },
+  {
+    "id": 124708,
+    "name": "Mice and Mystics",
+    "players": "1-4",
+    "min_players": 1,
+    "max_players": 4,
+    "complexity": "medium",
+    "genres": [
+      "cooperative",
+      "adventure"
+    ],
+    "mechanics": [
+      "campaign",
+      "storytelling",
+      "tile placement"
+    ],
+    "length": "60-90",
+    "year": 2012,
+    "publisher": "Plaid Hat Games",
+    "themes": [
+      "Fantasy",
+      "Mice",
+      "Adventure"
+    ],
+    "imageUrl": "https://cf.geekdo-images.com/pZFrbWXBzrkxqOotg05D9Q__original/img/2cwA1euTZ-Lm7hMBEJTBkrRl1dQ=/0x0/filters:format(jpeg)/pic1312072.jpg",
+    "review": "Charming storytelling with tactical play. Feels like a fantasy book come to life.",
+    "rating": "8/10"
+  },
+  {
+    "id": 239188,
+    "name": "Chronicles of Crime",
+    "players": "1-4",
+    "min_players": 1,
+    "max_players": 4,
+    "complexity": "medium",
+    "genres": [
+      "cooperative",
+      "detective"
+    ],
+    "mechanics": [
+      "storytelling",
+      "app-integration",
+      "crime-solving"
+    ],
+    "length": "60",
+    "year": 2018,
+    "publisher": "Lucky Duck Games",
+    "themes": [
+      "Crime",
+      "Investigation"
+    ],
+    "imageUrl": "https://cf.geekdo-images.com/1BMyuEwK0zV9005oYinYLw__original/img/3OigysLof9HIk4jvV79Cm-tb-gY=/0x0/filters:format(jpeg)/pic4317519.jpg",
+    "review": "Incredibly engaging mystery-solving with a tech twist. You’ll feel like a real detective.",
+    "rating": "10/10"
+  },
+  {
+    "id": 322622,
+    "name": "Floriferous",
+    "players": "2-4",
+    "min_players": 2,
+    "max_players": 4,
+    "complexity": "light",
+    "genres": [
+      "strategy",
+      "family"
+    ],
+    "mechanics": [
+      "set-collection",
+      "tile-placement"
+    ],
+    "length": "30-45",
+    "year": 2021,
+    "publisher": "Calendars",
+    "themes": [
+      "Gardening",
+      "Nature"
+    ],
+    "imageUrl": "https://cf.geekdo-images.com/mg6SJV5JH5SY1pMI6C_GzA__original/img/VhuloJwQlvD1v-Otc54evdXE5ew=/0x0/filters:format(png)/pic5898743.png",
+    "review": "Peaceful and elegant. A relaxing game that feels like painting with flowers.",
+    "rating": "6/10"
+  },
+  {
+    "id": 195314,
+    "name": "Herbaceous",
+    "players": "2-4",
+    "min_players": 2,
+    "max_players": 4,
+    "complexity": "light",
+    "genres": [
+      "family",
+      "strategy"
+    ],
+    "mechanics": [
+      "set-collection",
+      "drafting"
+    ],
+    "length": "30",
+    "year": 2017,
+    "publisher": "Pandasaurus Games",
+    "themes": [
+      "Gardening",
+      "Nature"
+    ],
+    "imageUrl": "https://cf.geekdo-images.com/0HHqYFhJvOwk8Z0Dt-EvTA__original/img/PUZECnFJTnvhRL48lpUzR5TR48w=/0x0/filters:format(jpeg)/pic7083274.jpg", 
+    "review": "Beautiful art and simple set collection. Perfect for a calm, short game night.",
+    "rating": "6/10"
+  },
+  {
+    "id": 174430,
+    "name": "Gloomhaven",
+    "players": "1-4",
+    "min_players": 1,
+    "max_players": 4,
+    "complexity": "heavy",
+    "genres": [
+      "adventure",
+      "strategy"
+    ],
+    "mechanics": [
+      "campaign",
+      "hand-management",
+      "tile-placement"
+    ],
+    "length": "120-180",
+    "year": 2017,
+    "publisher": "Cephalofair Games",
+    "themes": [
+      "Fantasy",
+      "Dungeon Crawler"
+    ],
+    "imageUrl": "https://cf.geekdo-images.com/sZYp_3BTDGjh2unaZfZmuA__original/img/7d-lj5Gd1e8PFnD97LYFah2c45M=/0x0/filters:format(jpeg)/pic2437871.jpg",
+    "review": "Massive in scale and scope. A true RPG experience in a box with deep tactics.",
+    "rating": "9/10"
+  },
+  {
+    "id": 204583,
+    "name": "Kingdomino",
+    "players": "2-4",
+    "min_players": 2,
+    "max_players": 4,
+    "complexity": "light",
+    "genres": [
+      "family",
+      "strategy"
+    ],
+    "mechanics": [
+      "tile-placement",
+      "set-collection"
+    ],
+    "length": "15-20",
+    "year": 2016,
+    "publisher": "Blue Orange Games",
+    "themes": [
+      "Kingdom",
+      "Tiles"
+    ],
+    "imageUrl": "https://cf.geekdo-images.com/c0m3gwZTcfKoLI63ASio8g__original/img/HT6NQPT0cSFcZXjSewtjTO_NBAE=/0x0/filters:format(png)/pic8443569.png",
+    "review": "Easy to learn but rewarding. A perfect family game with a puzzle-y twist.",
+    "rating": "7/10"
+  },
+  {
+    "id": 42,
+    "name": "Tigris & Euphrates",
+    "players": "2-4",
+    "min_players": 2,
+    "max_players": 4,
+    "complexity": "medium",
+    "genres": [
+      "strategy",
+      "euro"
+    ],
+    "mechanics": [
+      "area-control",
+      "tile-placement"
+    ],
+    "length": "60-90",
+    "year": 1997,
+    "publisher": "Kosmos",
+    "themes": [
+      "Civilization",
+      "Ancient"
+    ],
+    "imageUrl": "https://cf.geekdo-images.com/soAzNVWglCdVBacNjoCTJw__original/img/HClVZy9phFP-NPte4UBQpclsaHU=/0x0/filters:format(jpeg)/pic2338267.jpg",
+    "review": "Deep strategy and conflict in ancient times. Abstract and brain-burning.",
+    "rating": "8/10"
+  },
+  {
+    "id": 233371,
+    "name": "Clank! A Deck-Building Adventure",
+    "players": "2-4",
+    "min_players": 2,
+    "max_players": 4,
+    "complexity": "medium",
+    "genres": [
+      "strategy",
+      "deck-building"
+    ],
+    "mechanics": [
+      "deck-building",
+      "push-your-luck"
+    ],
+    "length": "45-60",
+    "year": 2016,
+    "publisher": "Renegade Game Studios",
+    "themes": [
+      "Dungeon",
+      "Treasure Hunt"
+    ],
+    "imageUrl": "https://cf.geekdo-images.com/haDQw7X8Z0VOItfow9eDtg__original/img/Gq7eW_IFnUgIFcWcZSbWihAzdTs=/0x0/filters:format(jpeg)/pic3720843.jpg",
+    "review": "A clever hybrid of deck-building and dungeon-crawling with high tension.",
+    "rating": "9/10"
+  },
+  {
+    "id": 12692,
+    "name": "Gloom",
+    "players": "2-5",
+    "min_players": 2,
+    "max_players": 5,
+    "complexity": "light",
+    "genres": [
+      "party",
+      "strategy"
+    ],
+    "mechanics": [
+      "card-drafting",
+      "set-collection"
+    ],
+    "length": "30-45",
+    "year": 2005,
+    "publisher": "Atlas Games",
+    "themes": [
+      "Dark Humor",
+      "Tragedy"
+    ],
+    "imageUrl": "https://cf.geekdo-images.com/jD7_Ir8gL_9AXC-wjnqjHg__original/img/RjeHGxYOUqBv7sUgcRF5VdDlhbs=/0x0/filters:format(jpeg)/pic2080481.jpg",
+    "review": "Tell your character’s tragic tale with transparent cards. Funny, morbid, and clever.",
+    "rating": "7/10"
+  },
+  {
+    "id": 396607,
+    "name": "Sheriff of Nottingham",
+    "players": "3-5",
+    "min_players": 3,
+    "max_players": 5,
+    "complexity": "medium",
+    "genres": [
+      "party",
+      "bluffing"
+    ],
+    "mechanics": [
+      "bluffing",
+      "set-collection"
+    ],
+    "length": "30-60",
+    "year": 2015,
+    "publisher": "Arcane Wonders",
+    "themes": [
+      "Trading",
+      "Deception"
+    ],
+    "imageUrl": "https://cf.geekdo-images.com/msyul-H4_YZvlUPt-TmGjw__original/img/oCzM1TXKlIz1JuXuO622LSfh6pY=/0x0/filters:format(jpeg)/pic7654781.jpg",
+    "review": "A bluffing game full of lies, bribery, and laughter. Pure social fun.",
+    "rating": "8/10"
+  },
+  {
+    "id": 1294,
+    "name": "Clue",
+    "players": "3-6",
+    "min_players": 3,
+    "max_players": 6,
+    "complexity": "light",
+    "genres": [
+      "party",
+      "deduction"
+    ],
+    "mechanics": [
+      "deduction",
+      "investigation"
+    ],
+    "length": "30-45",
+    "year": 1949,
+    "publisher": "Hasbro",
+    "themes": [
+      "Mystery",
+      "Crime"
+    ],
+    "imageUrl": "https://cf.geekdo-images.com/wNcbhLJGGjakYjjm1gV_kQ__original/img/Ji1MKh8gogtczoDecOi5D5yo9hQ=/0x0/filters:format(png)/pic7563466.png",
+    "review": "A timeless deduction classic. Not as deep as modern games, but still solid.",
+    "rating": "6/10"
+  },
+  {
+    "id": 43443,
+    "name": "Castle Panic",
+    "players": "2-6",
+    "min_players": 2,
+    "max_players": 6,
+    "complexity": "light",
+    "genres": [
+      "cooperative",
+      "strategy"
+    ],
+    "mechanics": [
+      "cooperative",
+      "tower-defense"
+    ],
+    "length": "45",
+    "year": 2009,
+    "publisher": "Fireside Games",
+    "themes": [
+      "Fantasy",
+      "Defense"
+    ],
+    "imageUrl": "https://cf.geekdo-images.com/ryPiCH15spkrdtvUI-utuA__original/img/RYiSrrenTejCl149T6tc2d9CuwA=/0x0/filters:format(jpeg)/pic6966125.jpg",
+    "review": "A great intro to cooperative tower defense. Simple fun with escalating stakes.",
+        "rating": "6/10"
+  },
+  {
+    "id": 15062,
+    "name": "Shadows Over Camelot",
+    "players": "3-7",
+    "min_players": 3,
+    "max_players": 7,
+    "complexity": "medium",
+    "genres": [
+      "cooperative",
+      "strategy"
+    ],
+    "mechanics": [
+      "cooperative",
+      "role-selection"
+    ],
+    "length": "60-90",
+    "year": 2005,
+    "publisher": "Days of Wonder",
+    "themes": [
+      "Arthurian Legends",
+      "Fantasy"
+    ],
+    "imageUrl": "https://cf.geekdo-images.com/JYqwG_v1B3RhpB7NcmeDOA__original/img/_eAaG7PMaTcj1DpHbmUaOBTisoY=/0x0/filters:format(jpeg)/pic70547.jpg",
+    "review": "Knights, quests, and hidden traitors. A clever semi-coop full of tension.",
+    "rating": "7/10"
+  },
+  {
+    "id": 110327,
+    "name": "Lords of Waterdeep",
+    "players": "2-5",
+    "min_players": 2,
+    "max_players": 5,
+    "complexity": "medium",
+    "genres": [
+      "strategy",
+      "dungeon-crawl"
+    ],
+    "mechanics": [
+      "worker-placement",
+      "adventure"
+    ],
+    "length": "60-120",
+    "year": 2012,
+    "publisher": "Wizards of the Coast",
+    "themes": [
+      "Fantasy",
+      "Dungeons"
+    ],
+    "imageUrl": "https://cf.geekdo-images.com/-hk8f8iGk_DyWyMrfiPBkg__original/img/GWNOhno3y7g0XE00VacKaRxoczk=/0x0/filters:format(jpeg)/pic1116080.jpg",
+    "review": "A gateway into worker placement with solid mechanics and a rich fantasy theme.",
+    "rating": "10/10"
+  },
+  {
+    "id": 336986,
+    "name": "Flamecraft",
+    "players": "1-5",
+    "min_players": 1,
+    "max_players": 5,
+    "complexity": "medium",
+    "genres": [
+      "family",
+      "strategy"
+    ],
+    "mechanics": [
+      "engine-building",
+      "worker-placement"
+    ],
+    "length": "45-60",
+    "year": 2022,
+    "publisher": "Cardboard Alchemy",
+    "themes": [
+      "Dragons",
+      "Fantasy"
+    ],
+    "imageUrl": "https://cf.geekdo-images.com/EvGtnsBDcfnKiqSiXHothQ__original/img/7yj8nA0ObuZ1w5AYCThEOK6meWA=/0x0/filters:format(jpeg)/pic6605448.jpg",
+    "review": "Absolutely adorable with layered strategy. Dragons and charm in every turn.",
+    "rating": "10/10"
+  },
+  {
+    "id": 10630,
+    "name": "Memoir '44",
+    "players": "2",
+    "min_players": 2,
+    "max_players": 2,
+    "complexity": "medium",
+    "genres": [
+      "strategy",
+      "war"
+    ],
+    "mechanics": [
+      "area-control",
+      "combat"
+    ],
+    "length": "60-120",
+    "year": 2004,
+    "publisher": "Days of Wonder",
+    "themes": [
+      "World War II",
+      "Military"
+    ],
+    "imageUrl": "https://cf.geekdo-images.com/2AjxTtgBtZVst8wOAk1NAA__original/img/Ro6pGYz0WFmCOP5ytZ6Z40KhoZ4=/0x0/filters:format(jpeg)/pic6974498.jpg",
+    "review": "Brilliant WWII tactical game with accessible rules and huge replay value.",
+    "rating": "10/10"
+  },
+  {
+    "id": 268864,
+    "name": "Undaunted: Normandy",
+    "players": "2",
+    "min_players": 2,
+    "max_players": 2,
+    "complexity": "medium",
+    "genres": [
+      "strategy",
+      "deck-building"
+    ],
+    "mechanics": [
+      "deck-building",
+      "combat"
+    ],
+    "length": "30-60",
+    "year": 2019,
+    "publisher": "Osprey Games",
+    "themes": [
+      "World War II",
+      "Tactics"
+    ],
+    "imageUrl": "https://cf.geekdo-images.com/iCd6hMGDzsQ_UXh00iKsJA__original/img/QhbQ2AMud-_H0fliiSIvc0dowOU=/0x0/filters:format(jpeg)/pic4602347.jpg",
+    "review": "Deck-building meets tactical combat in this elegant and brilliant wargame.",
+    "rating": "10/10"
+  },
+  {
+    "id": 304051,
+    "name": "Creature Comforts",
+    "players": "2-6",
+    "min_players": 2,
+    "max_players": 6,
+    "complexity": "medium",
+    "genres": [
+      "family",
+      "strategy"
+    ],
+    "mechanics": [
+      "worker-placement",
+      "set-collection"
+    ],
+    "length": "45-60",
+    "year": 2021,
+    "publisher": "Kids Table BG",
+    "themes": [
+      "Animals",
+      "Cozy"
+    ],
+    "imageUrl": "https://cf.geekdo-images.com/A0ZRM7_H6ecCQ8-lW0MtQQ__original/img/VcraEiTpK1jfGuU_A3-UiaH-cZI=/0x0/filters:format(jpeg)/pic5799638.jpg",
+    "review": "A warm and cozy game of building a snug home before winter. Wholesome joy.",
+    "rating": "10/10"
+  },
+  {
+    "id": 282524,
+    "name": "Horrified",
+    "players": "1-5",
+    "min_players": 1,
+    "max_players": 5,
+    "complexity": "medium",
+    "genres": [
+      "cooperative",
+      "strategy"
+    ],
+    "mechanics": [
+      "cooperative",
+      "action-point"
+    ],
+    "length": "60",
+    "year": 2019,
+    "publisher": "Ravensburger",
+    "themes": [
+      "Monsters",
+      "Cooperative"
+    ],
+    "imageUrl": "https://cf.geekdo-images.com/SoClIcwjDo_iZs0idVikDw__original/img/TEprFkOM3G_u2HnUvh05WITeXbg=/0x0/filters:format(jpeg)/pic4848330.jpg",
+    "review": "Team up to defeat classic monsters. Accessible, thematic, and always tense.",
+    "rating": "8/10"
+  },
+  {
+    "id": 65244,
+    "name": "Forbidden Island",
+    "players": "2-4",
+    "min_players": 2,
+    "max_players": 4,
+    "complexity": "light",
+    "genres": [
+      "cooperative",
+      "strategy"
+    ],
+    "mechanics": [
+      "cooperative",
+      "set-collection"
+    ],
+    "length": "30",
+    "year": 2010,
+    "publisher": "Gamewright",
+    "themes": [
+      "Adventure",
+      "Treasure"
+    ],
+    "imageUrl": "https://cf.geekdo-images.com/JgAkEBUaiHOsOS94iRMs2w__original/img/H5d4I5z_HSpPEu7EAl0DqLt9_pM=/0x0/filters:format(jpeg)/pic646458.jpg",
+    "review": "A simple, fast co-op where you escape a sinking island. Great for families.",
+    "rating": "7/10"
+  },
+  {
+    "id": 374173,
+    "name": "Star Wars: The Deckbuilding Game",
+    "players": "2",
+    "min_players": 2,
+    "max_players": 2,
+    "complexity": "medium",
+    "genres": [
+      "card game",
+      "strategy"
+    ],
+    "mechanics": [
+      "deck-building",
+      "combat"
+    ],
+    "length": "30-60",
+    "year": 2021,
+    "publisher": "Fantasy Flight Games",
+    "themes": [
+      "Star Wars",
+      "Sci-Fi"
+    ],
+    "imageUrl": "https://cf.geekdo-images.com/U6scsOGrPtVym4nCLaYjyw__original/img/bPFq87JbA919A2vxks_PFF2DwsY=/0x0/filters:format(png)/pic7387735.png",
+    "review": "Dueling in a galaxy far, far away. Quick, punchy, and full of fan service.",
+    "rating": "8/10"
+  },
+  {
+    "id": 337787,
+    "name": "Summer Camp",
+    "players": "2-4",
+    "min_players": 2,
+    "max_players": 4,
+    "complexity": "light",
+    "genres": [
+      "family",
+      "strategy"
+    ],
+    "mechanics": [
+      "set-collection",
+      "action-selection"
+    ],
+    "length": "30-45",
+    "year": 2020,
+    "publisher": "Green Couch Games",
+    "themes": [
+      "Summer",
+      "Camp"
+    ],
+    "imageUrl": "https://cf.geekdo-images.com/KshsJJWgb265ZQjcxyZ89w__original/img/xnOVN46wMhi0thUUWnkkYPB68-k=/0x0/filters:format(jpeg)/pic6149210.jpg",
+    "review": "A light, nostalgic deck-builder with a breezy theme and simple fun.",
+    "rating": "10/10"
+  }
+]

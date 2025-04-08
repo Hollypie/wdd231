@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Chamber of Commerce Discover Page">
+    <meta name="description" content="Board Game Finder Application">
     <meta name="author" content="Holly Briggs">
-    <title>Orem Chamber of Commerce Discover</title>
+    <title>Board Game Finder Application</title>
     <link rel="icon" href="favicon.ico">
 
     <!-- Open graph meta tags for social media -->
-    <meta property="og:title" content=" Orem Chamber of Commerce Discover Page">
+    <meta property="og:title" content="Board Game Finder App">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://static1.squarespace.com/static/602d89283d9bab5833fa17af/60303db61dfc976fbdcce1a5/63dab2234ad2614010d425ca/1678906102427/Orem+aerial+view.jpg?format=1500w">
-    <meta property="og:description" content="Orem Chamber of Commerce Discover Page">
-    <meta property="og:url" content="https://hollypie.github.io/wdd231/chamber/discover.html">
+    <meta property="og:image" content="https://themiawave.org/wp-content/uploads/2021/03/Screen-Shot-2021-03-31-at-11.37.27-AM.png">
+    <meta property="og:description" content="Board Game Finder App">
+    <meta property="og:url" content="https://hollypie.github.io/wdd231/project/index.html">
 
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
@@ -23,7 +23,7 @@
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
     <script src="scripts/visits.js" defer></script>
-    <script src="scripts/app.js" defer></script>
+    <script src="scripts/recommendations.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,16 +45,15 @@
     <nav id="animateme">
         <ul class="menuLinks">
             <li class="current-menu-item"><a href="index.html" title="Home">Home</a></li>
-            <li><a href="directory.html">Directory</a></li>
-            <li><a href="join.html" title="Join">Join</a></li>
-            <li><a href="discover.html" title="Discover">Discover</a></li>
+            <li><a href="library.html" title="Library">Library</a></li>
+            <li><a href="about_me.html" title="About me">About Me</a></li>
         </ul>
     </nav>
     <main>
         <h1>Board Game Finder</h1>
         <p id="visitMessage"></p>
         <div id="finder">
-            <form method="GET" action="recommendations.html">
+            <form method="GET" action="results.html">
                 <fieldset>
                     <legend>Number of Players:</legend>
                     <label><input type="radio" name="players" value="1" checked> 1</label><br>
@@ -110,33 +109,12 @@
         
     </main>
     <footer>
-        <section id="address">
-            <div id="addressText">
-                <h3>Orem Chamber of Commerce</h3>
-                <p>2696 N. University Ave Suite 220</p>
-                <p>Provo UT 84604</p>
-                <p>Contact Us (385) 482-2555</p>
-                <p>info@thechamber.org</p>
-            </div>
-        </section>
-        <!-- <section id="socialMedia">
-            <h3 class="visually-hidden">Social Media</h3>
-            <a href="https://facebook.com/business" target="_blank">
-                <img src="images/facebook_small.png" height="48" width="48" alt="Facebook">
-            </a>
-            <a href="https://twitter.com/business" target="_blank">
-                <img src="images/twitter_small.png" width="48" height="48" alt="Twitter">
-            </a>
-            <a href="https://instagram.com/business" target="_blank">
-                <img src="images/instagram_small.png" width="48" height="48" alt="Instagram">
-            </a>
-        </section> -->
         <section id="authorInfo">
             <div class=authorInfoText>
                 <h3 class="visually-hidden">Author Info</h3>
-                <p>WDD231 Class Project</p>
+                <p>WDD231 Final Project</p>
+                <p>Game Finder App</p>
                 <p>Holly Briggs</p>
-                <p>2025 Orem Chamber of Commerce</p>
                 <p>©<span id="yearDisplay"></span> Holly Briggs Utah, USA</p>
                 <p id="lastModified"></p>
             </div>

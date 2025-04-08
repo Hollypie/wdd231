@@ -1,0 +1,160 @@
+{
+    "games": [
+      {
+        "name": "King of Tokyo",
+        "review": "A chaotic and fun dice-rolling brawl that’s perfect for groups who enjoy battling for monster supremacy.",
+        "rating": "7/10"
+      },
+      {
+        "name": "Heat: Pedal to the Metal",
+        "review": "A fast-paced racing game that brilliantly simulates high-speed strategy with surprising depth.",
+        "rating": "8/10"
+      },
+      {
+        "name": "Thunder Road: Vendetta",
+        "review": "Mad Max vibes meet thrilling car combat. Destructive, wild, and full of cinematic moments.",
+        "rating": "8/10"
+      },
+      {
+        "name": "Ghost Fighting Treasure Hunters",
+        "review": "A fantastic family co-op game with just the right mix of strategy and spooky fun.",
+        "rating": "7/10"
+      },
+      {
+        "name": "Dutch Blitz",
+        "review": "Lightning-fast card chaos that's addictive and best with competitive players.",
+        "rating": "6/10"
+      },
+      {
+        "name": "Yahtzee",
+        "review": "A classic dice game of luck and probability. Still holds up for a casual roll-off.",
+        "rating": "5/10"
+      },
+      {
+        "name": "Sushi Go!",
+        "review": "Cute and quick drafting game with surprisingly tasty strategy for all ages.",
+        "rating": "7/10"
+      },
+      {
+        "name": "Mansions of Madness",
+        "review": "Immersive and chilling, this app-driven Lovecraftian adventure is heavy but rewarding.",
+        "rating": "9/10"
+      },
+      {
+        "name": "Stuffed Fables",
+        "review": "A heartfelt story-driven game where plush toys protect their child. Unique and emotional.",
+        "rating": "8/10"
+      },
+      {
+        "name": "Mice and Mystics",
+        "review": "Charming storytelling with tactical play. Feels like a fantasy book come to life.",
+        "rating": "8/10"
+      },
+      {
+        "name": "Chronicles of Crime",
+        "review": "Incredibly engaging mystery-solving with a tech twist. You’ll feel like a real detective.",
+        "rating": "10/10"
+      },
+      {
+        "name": "Floriferous",
+        "review": "Peaceful and elegant. A relaxing game that feels like painting with flowers.",
+        "rating": "6/10"
+      },
+      {
+        "name": "Herbaceous",
+        "review": "Beautiful art and simple set collection. Perfect for a calm, short game night.",
+        "rating": "6/10"
+      },
+      {
+        "name": "Gloomhaven",
+        "review": "Massive in scale and scope. A true RPG experience in a box with deep tactics.",
+        "rating": "9/10"
+      },
+      {
+        "name": "Kingdomino",
+        "review": "Easy to learn but rewarding. A perfect family game with a puzzle-y twist.",
+        "rating": "7/10"
+      },
+      {
+        "name": "Tigris & Euphrates",
+        "review": "Deep strategy and conflict in ancient times. Abstract and brain-burning.",
+        "rating": "8/10"
+      },
+      {
+        "name": "Clank! A Deck-Building Adventure",
+        "review": "A clever hybrid of deck-building and dungeon-crawling with high tension.",
+        "rating": "9/10"
+      },
+      {
+        "name": "Gloom",
+        "review": "Tell your character’s tragic tale with transparent cards. Funny, morbid, and clever.",
+        "rating": "7/10"
+      },
+      {
+        "name": "Sheriff of Nottingham",
+        "review": "A bluffing game full of lies, bribery, and laughter. Pure social fun.",
+        "rating": "8/10"
+      },
+      {
+        "name": "Clue",
+        "review": "A timeless deduction classic. Not as deep as modern games, but still solid.",
+        "rating": "6/10"
+      },
+      {
+        "name": "Castle Panic",
+        "review": "A great intro to cooperative tower defense. Simple fun with escalating stakes.",
+        "rating": "6/10"
+      },
+      {
+        "name": "Shadows Over Camelot",
+        "review": "Knights, quests, and hidden traitors. A clever semi-coop full of tension.",
+        "rating": "7/10"
+      },
+      {
+        "name": "Lords of Waterdeep",
+        "review": "A gateway into worker placement with solid mechanics and a rich fantasy theme.",
+        "rating": "10/10"
+      },
+      {
+        "name": "Flamecraft",
+        "review": "Absolutely adorable with layered strategy. Dragons and charm in every turn.",
+        "rating": "10/10"
+      },
+      {
+        "name": "Memoir '44",
+        "review": "Brilliant WWII tactical game with accessible rules and huge replay value.",
+        "rating": "10/10"
+      },
+      {
+        "name": "Undaunted: Normandy",
+        "review": "Deck-building meets tactical combat in this elegant and brilliant wargame.",
+        "rating": "10/10"
+      },
+      {
+        "name": "Creature Comforts",
+        "review": "A warm and cozy game of building a snug home before winter. Wholesome joy.",
+        "rating": "10/10"
+      },
+      {
+        "name": "Horrified",
+        "review": "Team up to defeat classic monsters. Accessible, thematic, and always tense.",
+        "rating": "8/10"
+      },
+      {
+        "name": "Forbidden Island",
+        "review": "A simple, fast co-op where you escape a sinking island. Great for families.",
+        "rating": "7/10"
+      },
+      {
+        "name": "Star Wars: The Deckbuilding Game",
+        "review": "Dueling in a galaxy far, far away. Quick, punchy, and full of fan service.",
+        "rating": "8/10"
+      },
+      {
+        "name": "Summer Camp",
+        "review": "A light, nostalgic deck-builder with a breezy theme and simple fun.",
+        "rating": "10/10"
+      }
+    ]
+  }
+  

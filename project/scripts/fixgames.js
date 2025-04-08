@@ -2,32 +2,11 @@ const axios = require("axios");
 const fs = require("fs");
 const path = require("path");
 const xml2js = require("xml2js");
-const games = require("./small_games.json"); 
 
-const imagesFolder = path.join(__dirname, "images");
-if (!fs.existsSync(imagesFolder)) {
-  fs.mkdirSync(imagesFolder);
-}
+const gamesFilePath = path.join(__dirname, "small_games.json");
+let games = require(gamesFilePath);
 
 const BGG_API_URL = "https://www.boardgamegeek.com/xmlapi2/thing?id=";
-
-// Function to download images
-const downloadImage = async (url, filename) => {
-  try {
-    const response = await axios.get(url, {
-      responseType: "arraybuffer",
-      headers: {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
-      },
-    });
-
-    const filePath = path.join(imagesFolder, filename);
-    fs.writeFileSync(filePath, response.data);
-    console.log(`Downloaded: ${filename}`);
-  } catch (error) {
-    console.error(`Failed to download image for ${filename}: ${error.message}`);
-  }
-};
 
 // Function to fetch image URL from BGG API
 const fetchImageUrl = async (gameId) => {
@@ -48,21 +27,25 @@ const fetchImageUrl = async (gameId) => {
   }
 };
 
-// Main function to process images
-const fetchAndDownloadImages = async () => {
+// Main function to update image URLs in games.json
+const updateGameImageUrls = async () => {
   for (const game of games) {
     console.log(`Fetching image for ${game.name} (ID: ${game.id})...`);
     const imageUrl = await fetchImageUrl(game.id);
     
     if (imageUrl) {
-      const filename = `${game.id}.jpg`;
-      await downloadImage(imageUrl, filename);
+      game.imageUrl = imageUrl;
+      console.log(`Updated image URL for ${game.name}`);
     } else {
       console.log(`No image found for ${game.name}`);
     }
     
     await new Promise(resolve => setTimeout(resolve, 2000)); // Delay between requests
   }
+
+  // Write the updated games array back to games.json
+  fs.writeFileSync(gamesFilePath, JSON.stringify(games, null, 2));
+  console.log("games.json has been updated with the correct image URLs.");
 };
 
-fetchAndDownloadImages();
+updateGameImageUrls();
