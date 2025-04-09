@@ -140,16 +140,6 @@ main h1 {
     padding-left: 1rem;
 }
 
-
-
-
-main div img {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-
-}
-
 #cards {
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
@@ -220,4 +210,32 @@ dialog button {
 #visitMessage {
     margin: 1rem;
 }
+
+#interestedList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.interested-game {
+    background-color: #f0f0f0;
+    padding: 8px 12px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.interested-game span {
+    margin-right: 8px;
+    font-weight: 500;
+}
+
+.remove-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #900;
+}
+
 

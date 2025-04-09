@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Board Game Finder Application">
     <meta name="author" content="Holly Briggs">
-    <title>Board Game Finder Application</title>
+    <title>Game Results - Board Game Finder</title>
     <link rel="icon" href="favicon.ico">
 
     <!-- Open graph meta tags for social media -->
@@ -22,8 +22,7 @@
 
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
-    <script src="scripts/visits.js" defer></script>
-    <script src="scripts/results.js" defer></script>
+    <script src="scripts/recommendations.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,9 +31,6 @@
 </head>
 <body>
     <header>
-        <!-- <a href="index.html">
-            <img src="images/orem_small.webp" width="120" height="120" alt="Orem Chamber of Commerce logo">
-        </a> -->
         <div id="headerTitle">
             <h2>Board Game Finder</h2>
         </div>
@@ -49,16 +45,33 @@
         </ul>
     </nav>
     <main>
-        <h1>Board Game Finder</h1>
-        <p id="visitMessage"></p>
-        <div id="finder">
-            
+        <h1>Your Game Recommendations</h1>
+        
+        <!-- Filter summary section -->
+        <section id="filter-summary">
+            <h2>Your Search Filters</h2>
+            <div id="filter-details">
+                <!-- Filter details will be filled in by JavaScript -->
+            </div>
+            <a href="index.html" class="button">Modify Search</a>
+        </section>
+        
+        <div id="results">
+            <!-- The games with checkboxes will be displayed here -->
+            <p>Loading your game recommendations...</p>
         </div>
-        <div id="results"></div>
+    
+        <section id="interested-games">
+            <h2>Your Interested Games</h2>
+            <div id="interestedList">
+                <!-- Games of interest will be injected here -->
+                <p>Loading your saved games...</p>
+            </div>
+        </section>
     </main>
     <footer>
         <section id="authorInfo">
-            <div class=authorInfoText>
+            <div class="authorInfoText">
                 <h3 class="visually-hidden">Author Info</h3>
                 <p>WDD231 Final Project</p>
                 <p>Game Finder App</p>
@@ -70,4 +83,3 @@
     </footer>
 </body>
 </html>
-

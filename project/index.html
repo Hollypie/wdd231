@@ -22,7 +22,8 @@
 
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
-    <script src="scripts/visits.js" defer></script>
+    <!-- <script src="scripts/visits.js" defer></script> -->
+    <!-- <script src="scripts/interested.js" defer></script> -->
     <script src="scripts/recommendations.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,9 +51,8 @@
     </nav>
     <main>
         <h1>Board Game Finder</h1>
-        <p id="visitMessage"></p>
         <div id="finder">
-            <form method="GET" action="results.html">
+            <form id="gameForm" method="GET" action="results.html">
                 <fieldset>
                     <legend>Number of Players:</legend>
                     <label><input type="radio" name="players" value="1" checked> 1</label><br>
@@ -104,8 +104,13 @@
                 <button type="submit" style="padding: 10px 20px; font-size: 16px;">Find Games</button>
             </form>
         </div>
+        <section id="interested-games">
+            <h2>Your Interested Games</h2>
+            <div id="interestedList">
+              <!-- Games of interest will be injected here -->
+            </div>
+        </section>
         <div id="results"></div>
-        
     </main>
     <footer>
         <section id="authorInfo">

@@ -1,82 +1,66 @@
-// scripts/results.js
-console.log("results.js loaded");
-
-document.addEventListener('DOMContentLoaded', () => {
-    const params = new URLSearchParams(window.location.search);
-
-    const selectedPlayers = params.get("players");
-    const selectedComplexity = params.get("complexity");
-    const selectedGenres = params.getAll("genre[]");
-    const selectedMechanics = params.getAll("mechanics[]");
-    const selectedLength = params.get("length");
-
-    fetch("data/small_games.json")  // adjust this path to match your folder structure
-        .then(response => response.json())
-        .then(games => {
-            const filteredGames = games.filter(game => {
-                return (
-                    matchesPlayers(game, selectedPlayers) &&
-                    game.complexity === selectedComplexity &&
-                    matchesAny(game.genres, selectedGenres) &&
-                    matchesAny(game.mechanics, selectedMechanics) &&
-                    matchesLength(game.length, selectedLength)
-                );
-            });
-
-            displayResults(filteredGames);
-        });
-
-    function matchesPlayers(game, selected) {
-        const min = game.min_players;
-        const max = game.max_players;
-
-        switch (selected) {
-            case "1": return min <= 1 && max >= 1;
-            case "2": return min <= 2 && max >= 2;
-            case "3-4": return max >= 3 && min <= 4;
-            case "5-6": return max >= 5 && min <= 6;
-            case "7+": return max >= 7;
-            default: return true;
-        }
+// Function to display the games (with checkboxes for interest)
+function displayGames(games) {
+    const resultsDiv = document.getElementById('results');
+    if (games.length === 0) {
+        resultsDiv.innerHTML = "<p>No matching games found. Try different filters!</p>";
+        return;
     }
 
-    function matchesLength(gameLength, selected) {
-        const length = gameLength.toLowerCase();
+    resultsDiv.innerHTML = games.map(game => `
+        <div class="game-card">
+            <img src="${game.imageUrl}" alt="${game.name}" style="max-width: 200px;">
+            <h3>${game.name}</h3>
+            <p><strong>Players:</strong> ${game.players}</p>
+            <p><strong>Complexity:</strong> ${game.complexity}</p>
+            <p><strong>Genres:</strong> ${game.genres.join(', ')}</p>
+            <p><strong>Mechanics:</strong> ${game.mechanics.join(', ')}</p>
+            <p><strong>Play Time:</strong> ${game.length} min</p>
 
-        if (selected === "under-30") return parseInt(length) < 30;
-        if (selected === "30-60") return length.includes("30") || length.includes("45") || length.includes("60");
-        if (selected === "1-2-hours") return length.includes("60") || length.includes("90") || length.includes("120");
-        if (selected === "2-plus-hours") return parseInt(length) > 120;
+            <!-- Add a checkbox for users to mark if they're interested in this game -->
+            <label>
+                <input type="checkbox" name="gameInterest" value="${game.name}">
+                Interested
+            </label>
+        </div>
+    `).join('');
+}
 
-        return true;
+// Save the selected games to localStorage when the form is submitted
+document.querySelector('form').addEventListener('submit', (event) => {
+    event.preventDefault(); // Prevent form submission
+
+    const selectedGames = [];
+    const checkboxes = document.querySelectorAll('input[name="gameInterest"]:checked');
+    checkboxes.forEach(checkbox => {
+        selectedGames.push(checkbox.value);
+    });
+
+    // Store the selected games in localStorage
+    localStorage.setItem('gamesOfInterest', JSON.stringify(selectedGames));
+
+    // Optionally, update the "Your Interested Games" section here
+    displayInterestedGames();
+});
+
+// Function to display previously selected interested games
+function displayInterestedGames() {
+    const gamesOfInterest = JSON.parse(localStorage.getItem('gamesOfInterest')) || [];
+    const interestedListDiv = document.getElementById('interestedList');
+
+    if (gamesOfInterest.length > 0) {
+        interestedListDiv.innerHTML = gamesOfInterest.join('<br>');
+    } else {
+        interestedListDiv.innerHTML = '<p>No games selected yet.</p>';
     }
+}
 
-    function matchesAny(gameTags, selectedTags) {
-        return selectedTags.length === 0 || selectedTags.some(tag => gameTags.includes(tag));
-    }
+// Call this function when the page loads to display saved games
+displayInterestedGames();
 
-    function displayResults(games) {
-        const container = document.getElementById("results");
-        container.innerHTML = "";
-
-        if (games.length === 0) {
-            container.innerHTML = "<p>No games match your criteria.</p>";
-            return;
-        }
-
-        games.forEach(game => {
-            const card = document.createElement("div");
-            card.classList.add("game-card");
-            card.innerHTML = `
-                <h3>${game.name}</h3>
-                <img class="gamePic" src="images/${game.id}.jpg" width="300px" alt="${game.name}" loading="lazy">
-                <p><strong>Players:</strong> ${game.players}</p>
-                <p><strong>Complexity:</strong> ${game.complexity}</p>
-                <p><strong>Genres:</strong> ${game.genres.join(", ")}</p>
-                <p><strong>Mechanics:</strong> ${game.mechanics.join(", ")}</p>
-                <p><strong>Length:</strong> ${game.length} minutes</p>
-            `;
-            container.appendChild(card);
-        });
-    }
+// When the page is ready, fetch and display filtered games
+document.addEventListener('DOMContentLoaded', async () => {
+    const filters = getQueryParams();
+    const games = await fetchGames(); // or use inline JSON
+    const filteredGames = filterGames(games, filters);
+    displayGames(filteredGames);  // Display the games with checkboxes
 });
