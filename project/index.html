@@ -33,9 +33,9 @@
 </head>
 <body>
     <header>
-        <!-- <a href="index.html">
-            <img src="images/orem_small.webp" width="120" height="120" alt="Orem Chamber of Commerce logo">
-        </a> -->
+        <a href="index.html">
+            <img src="images/dice.webp" width="130" height="130" alt="Orem Chamber of Commerce logo">
+        </a>
         <div id="headerTitle">
             <h2>Board Game Finder</h2>
         </div>
@@ -55,70 +55,69 @@
             <form id="gameForm" method="GET" action="results.html">
                 <fieldset>
                     <legend>Number of Players:</legend>
-                    <label><input type="radio" name="players" value="1" checked> 1</label><br>
-                    <label><input type="radio" name="players" value="2"> 2</label><br>
-                    <label><input type="radio" name="players" value="3-4"> 3-4</label><br>
-                    <label><input type="radio" name="players" value="5-6"> 5-6</label><br>
+                    <label><input type="radio" name="players" value="1" checked> 1</label>
+                    <label><input type="radio" name="players" value="2"> 2</label>
+                    <label><input type="radio" name="players" value="3-4"> 3-4</label>
+                    <label><input type="radio" name="players" value="5-6"> 5-6</label>
                     <label><input type="radio" name="players" value="7+"> 7+</label>
                 </fieldset>
             
                 <fieldset>
                     <legend>Complexity Level (Weight):</legend>
-                    <label><input type="radio" name="complexity" value="light" checked> Light (Easy to learn, quick play)</label><br>
-                    <label><input type="radio" name="complexity" value="medium"> Medium (Some strategy, moderate rules)</label><br>
-                    <label><input type="radio" name="complexity" value="heavy"> Heavy (Deep strategy, complex rules)</label><br>
+                    <label><input type="radio" name="complexity" value="light" checked> Light (Easy to learn, quick play)</label>
+                    <label><input type="radio" name="complexity" value="medium"> Medium (Some strategy, moderate rules)</label>
+                    <label><input type="radio" name="complexity" value="heavy"> Heavy (Deep strategy, complex rules)</label>
                 </fieldset>
             
                 <fieldset>
                     <legend>Game Genre</legend>
-                    <label><input type="checkbox" name="genre[]" value="cooperative"> Cooperative</label><br>
-                    <label><input type="checkbox" name="genre[]" value="strategy"> Strategy</label><br>
-                    <label><input type="checkbox" name="genre[]" value="party"> Party</label><br>
-                    <label><input type="checkbox" name="genre[]" value="family"> Family</label><br>
-                    <label><input type="checkbox" name="genre[]" value="thematic"> Thematic</label><br>
-                    <label><input type="checkbox" name="genre[]" value="abstract"> Abstract</label><br>
-                    <label><input type="checkbox" name="genre[]" value="deck-building"> Deckbuilding</label><br>
+                    <label><input type="checkbox" name="genre[]" value="cooperative"> Cooperative</label>
+                    <label><input type="checkbox" name="genre[]" value="strategy"> Strategy</label>
+                    <label><input type="checkbox" name="genre[]" value="party"> Party</label>
+                    <label><input type="checkbox" name="genre[]" value="family"> Family</label>
+                    <label><input type="checkbox" name="genre[]" value="thematic"> Thematic</label>
+                    <label><input type="checkbox" name="genre[]" value="abstract"> Abstract</label>
+                    <label><input type="checkbox" name="genre[]" value="deck-building"> Deckbuilding</label>
                     <label><input type="checkbox" name="genre[]" value="war"> War</label>
                 </fieldset>
             
                 <fieldset>
                     <legend>Game Mechanics:</legend>
-                    <label><input type="checkbox" name="mechanics[]" value="area-control"> Area Control</label><br>
-                    <label><input type="checkbox" name="mechanics[]" value="drafting"> Drafting</label><br>
-                    <label><input type="checkbox" name="mechanics[]" value="worker-placement"> Worker Placement</label><br>
-                    <label><input type="checkbox" name="mechanics[]" value="set-collection"> Set Collection</label><br>
-                    <label><input type="checkbox" name="mechanics[]" value="hidden-roles"> Hidden Roles</label><br>
-                    <label><input type="checkbox" name="mechanics[]" value="tile-placement"> Tile Placement</label><br>
-                    <label><input type="checkbox" name="mechanics[]" value="trick-taking"> Trick-Taking</label><br>
+                    <label><input type="checkbox" name="mechanics[]" value="area-control"> Area Control</label>
+                    <label><input type="checkbox" name="mechanics[]" value="drafting"> Drafting</label>
+                    <label><input type="checkbox" name="mechanics[]" value="worker-placement"> Worker Placement</label>
+                    <label><input type="checkbox" name="mechanics[]" value="set-collection"> Set Collection</label>
+                    <label><input type="checkbox" name="mechanics[]" value="hidden-roles"> Hidden Roles</label>
+                    <label><input type="checkbox" name="mechanics[]" value="tile-placement"> Tile Placement</label>
+                    <label><input type="checkbox" name="mechanics[]" value="trick-taking"> Trick-Taking</label>
                     <label><input type="checkbox" name="mechanics[]" value="roll-and-write"> Roll & Write</label>
                 </fieldset>
             
                 <fieldset>
                     <legend>Game Length</legend>
-                    <label><input type="radio" name="length" value="under-30" checked> Under 30 minutes</label><br>
-                    <label><input type="radio" name="length" value="30-60"> 30-60 minutes</label><br>
-                    <label><input type="radio" name="length" value="1-2-hours"> 1-2 hours</label><br>
-                    <label><input type="radio" name="length" value="2-plus-hours"> 2+ hours</label><br>
+                    <label><input type="radio" name="length" value="under-30" checked> Under 30 minutes</label>
+                    <label><input type="radio" name="length" value="30-60"> 30-60 minutes</label>
+                    <label><input type="radio" name="length" value="1-2-hours"> 1-2 hours</label>
+                    <label><input type="radio" name="length" value="2-plus-hours"> 2+ hours</label>
                 </fieldset>
             
                 <button type="submit" style="padding: 10px 20px; font-size: 16px;">Find Games</button>
             </form>
         </div>
-        <section id="interested-games">
-            <h2>Your Interested Games</h2>
+        <div id="interested">
+            <h2>Your Saved Games</h2>
             <div id="interestedList">
               <!-- Games of interest will be injected here -->
             </div>
-        </section>
+        </div>
         <div id="results"></div>
     </main>
     <footer>
-        <section id="authorInfo">
-            <div class=authorInfoText>
+        <section>
+            <div>
                 <h3 class="visually-hidden">Author Info</h3>
                 <p>WDD231 Final Project</p>
                 <p>Game Finder App</p>
-                <p>Holly Briggs</p>
                 <p>©<span id="yearDisplay"></span> Holly Briggs Utah, USA</p>
                 <p id="lastModified"></p>
             </div>

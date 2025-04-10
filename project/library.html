@@ -31,9 +31,9 @@
 </head>
 <body>
     <header>
-        <!-- <a href="index.html">
-            <img src="images/orem_small.webp" width="120" height="120" alt="Orem Chamber of Commerce logo">
-        </a> -->
+        <a href="index.html">
+            <img src="images/dice.webp" width="130" height="130" alt="Orem Chamber of Commerce logo">
+        </a>
         <div id="headerTitle">
             <h2>Board Game Finder</h2>
             
@@ -50,17 +50,30 @@
     </nav>
     <main>
         <h1>My Personal Library</h1>
+        <p>This is a gallery of games that are either in my personal library or that I know. Enjoy perusing.</p>
         <div id="library">
+        </div>
+        <div id="gameModal" class="modal">
+            <div class="modal-content">
+                <span id="closeModalBtn" class="close">&times;</span>
+                <h2 id="modalGameName"></h2>
+                <img id="modalGameImage" src="" alt="" style="max-width: 100%;">
+                <p id="modalGamePlayers"></p>
+                <p id="modalGameComplexity"></p>
+                <p id="modalGameGenres"></p>
+                <p id="modalGameMechanics"></p>
+                <p id="modalGameLength"></p>
+                <p id="modalGameReview"></p>
+            </div>
         </div>
         
     </main>
     <footer>
-        <section id="authorInfo">
-            <div class=authorInfoText>
+        <section>
+            <div>
                 <h3 class="visually-hidden">Author Info</h3>
                 <p>WDD231 Final Project</p>
                 <p>Game Finder App</p>
-                <p>Holly Briggs</p>
                 <p>©<span id="yearDisplay"></span> Holly Briggs Utah, USA</p>
                 <p id="lastModified"></p>
             </div>

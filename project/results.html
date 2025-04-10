@@ -31,6 +31,9 @@
 </head>
 <body>
     <header>
+        <a href="index.html">
+            <img src="images/dice.webp" width="130" height="130" alt="Orem Chamber of Commerce logo">
+        </a>
         <div id="headerTitle">
             <h2>Board Game Finder</h2>
         </div>
@@ -55,27 +58,39 @@
             </div>
             <a href="index.html" class="button">Modify Search</a>
         </section>
-        
-        <div id="results">
-            <!-- The games with checkboxes will be displayed here -->
-            <p>Loading your game recommendations...</p>
-        </div>
-    
-        <section id="interested-games">
-            <h2>Your Interested Games</h2>
-            <div id="interestedList">
-                <!-- Games of interest will be injected here -->
-                <p>Loading your saved games...</p>
+        <div class="results-container">
+            <div id="results">
+                <!-- The games with checkboxes will be displayed here -->
+                <p>Loading your game recommendations...</p>
             </div>
-        </section>
+            <div id="gameModal" class="modal">
+                <div class="modal-content">
+                    <span id="closeModalBtn" class="close">&times;</span>
+                    <h2 id="modalGameName"></h2>
+                    <img id="modalGameImage" src="" alt="" style="max-width: 100%;">
+                    <p id="modalGamePlayers"></p>
+                    <p id="modalGameComplexity"></p>
+                    <p id="modalGameGenres"></p>
+                    <p id="modalGameMechanics"></p>
+                    <p id="modalGameLength"></p>
+                </div>
+            </div>
+        
+            <div id="interested-games">
+                <h2>Your Saved Games</h2>
+                <div id="interestedList">
+                    <!-- Games of interest will be injected here -->
+                    <p>Loading your saved games...</p>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
-        <section id="authorInfo">
-            <div class="authorInfoText">
+        <section>
+            <div>
                 <h3 class="visually-hidden">Author Info</h3>
                 <p>WDD231 Final Project</p>
                 <p>Game Finder App</p>
-                <p>Holly Briggs</p>
                 <p>©<span id="yearDisplay"></span> Holly Briggs Utah, USA</p>
                 <p id="lastModified"></p>
             </div>

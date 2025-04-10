@@ -1,21 +1,21 @@
+let games = [];
+
 document.addEventListener('DOMContentLoaded', async () => {
     // Check if we're on the results page or index page
     const isResultsPage = window.location.pathname.includes('results.html');
-    
+    console.log('Is Results Page:', isResultsPage);  // Debug: check if on results page
+
     if (isResultsPage) {
         // Results page functionality
         const filters = getQueryParams();
-        const games = await fetchGames();
+        console.log('Filters:', filters); // Debug: check filters
+        games = await fetchGames();  // Populate games globally
+        console.log('Fetched Games:', games); // Debug: check if games were fetched
         const filteredGames = filterGames(games, filters);
+        console.log('Filtered Games:', filteredGames); // Debug: check if filtering works
         displayGames(filteredGames);
-        
-        // Add event listener for the "Save Interested Games" button
-        const saveButton = document.getElementById('saveInterested');
-        if (saveButton) {
-            saveButton.addEventListener('click', saveInterestedGames);
-        }
     }
-    
+
     // Display interested games on both pages
     displayInterestedGames();
 });
@@ -36,7 +36,9 @@ function getQueryParams() {
 async function fetchGames() {
     try {
         const response = await fetch('data/small_games.json');
-        return await response.json();
+        const gamesData = await response.json();
+        console.log('Games fetched:', gamesData);  // Debug: check fetched data
+        return gamesData;  // Return the fetched data
     } catch (error) {
         console.error('Error fetching game data:', error);
         return [];
@@ -45,6 +47,7 @@ async function fetchGames() {
 
 // Filter the games based on form input
 function filterGames(games, filters) {
+    console.log('Filtering games with filters:', filters); // Debug: see the filters being applied
     return games.filter(game => {
         const playerMatch = (() => {
             const min = game.min_players;
@@ -79,153 +82,89 @@ function filterGames(games, filters) {
 
 // Display games on the results page
 function displayGames(games) {
+    console.log('Displaying games:', games); // Debug: check which games are being displayed
     const resultsDiv = document.getElementById('results');
-    if (!resultsDiv) {
-        console.error("No 'results' div found.");
-        return;
-    }
+    if (!resultsDiv) return;
 
-    if (games.length === 0) {
-        resultsDiv.innerHTML = "<p>No matching games found. Try different filters!</p>";
-        return;
-    }
+    resultsDiv.innerHTML = games.map(game => `
+      <div class="gameCard">
+        <img src="${game.imageUrl}" alt="${game.name}" style="max-width: 200px;">
+        <div class=cardDetails>
+            <h3>${game.name}</h3>
+            <p><strong>Players:</strong> ${game.players}</p>
+            <p><strong>Complexity:</strong> ${game.complexity}</p>
+            <p><strong>Genres:</strong> ${game.genres.join(', ')}</p>
+            <p><strong>Mechanics:</strong> ${game.mechanics.join(', ')}</p>
+            <p><strong>Play Time:</strong> ${game.length} min</p>
 
-    // Get the current list of interested games
-    const gamesOfInterest = JSON.parse(localStorage.getItem('gamesOfInterest')) || [];
-    const interestedIds = new Set(gamesOfInterest.map(game => game.id || game.name));
-    
-    // Create HTML for game cards with checkboxes
-    let gamesHTML = `
-        <div class="game-results">
-            <h2>${games.length} Games Found</h2>
-            <div class="game-grid">
-    `;
-    
-    games.forEach(game => {
-        // Construct the image path using the game ID
-        const gameId = game.id || game.name.toLowerCase().replace(/\s+/g, '-');
-        const imagePath = `images/${gameId}.jpg`; // Adjust extension if needed (.png, .webp, etc.)
-        
-        const isInterested = interestedIds.has(game.id || game.name);
-            
-        gamesHTML += `
-            <div class="game-card">
-                <img src="${imagePath}" alt="${game.name}" loading="lazy">
-                <h3>${game.name}</h3>
-                <p><strong>Players:</strong> ${game.players}</p>
-                <p><strong>Complexity:</strong> ${game.complexity}</p>
-                <p><strong>Genres:</strong> ${game.genres.join(', ')}</p>
-                <p><strong>Mechanics:</strong> ${game.mechanics.join(', ')}</p>
-                <p><strong>Play Time:</strong> ${game.length} min</p>
-                <div class="interest-checkbox">
-                    <label>
-                        <input type="checkbox" name="gameInterest" 
-                               value="${game.id || game.name}" 
-                               data-game-name="${game.name}"
-                               data-game-image="${imagePath}"
-                               ${isInterested ? 'checked' : ''}>
-                        I'm interested in this game
-                    </label>
-                </div>
-            </div>
-        `;
-    });
-    
-    gamesHTML += `
-            </div>
-            <button id="saveInterested" type="button" class="save-button">Save My Interested Games</button>
+            <label>
+            <input class="check" type="checkbox" name="gameInterest" value="${game.id}" 
+                    data-game-image="${game.imageUrl}"
+                    data-game-name="${game.name}">
+            Save this Game in My Favorites List
+            </label>
         </div>
-    `;
-    
-    resultsDiv.innerHTML = gamesHTML;
-    
-    // Set up checkbox event listeners and save button
-    setupCheckboxListeners();
-    
-    // Add event listener for the "Save Interested Games" button
-    const saveButton = document.getElementById('saveInterested');
-    if (saveButton) {
-        saveButton.addEventListener('click', saveInterestedGames);
-    }
-}
+        <button class="more-info-btn" data-gamename="${game.name}">More Info</button>
+      </div>
+    `).join('');
 
-// Save the selected games to localStorage
-// Save the selected games to localStorage
-function saveInterestedGames() {
-    const checkboxes = document.querySelectorAll('input[name="gameInterest"]:checked');
-    
-    // Get existing games of interest first
-    const existingGames = JSON.parse(localStorage.getItem('gamesOfInterest')) || [];
-    
-    // Create a map of existing game IDs for easy lookup
-    const existingGameIds = new Set(existingGames.map(game => game.id || game.name));
-    
-    // Create an array to hold new games
-    const newGames = [];
-    
-    // Process checked games
-    checkboxes.forEach(checkbox => {
-        const gameId = checkbox.value;
-        
-        // Skip if this game is already in our interested list
-        if (existingGameIds.has(gameId)) return;
-        
-        const gameName = checkbox.getAttribute('data-game-name');
-        let imagePath = checkbox.getAttribute('data-game-image');
-        
-        // Ensure we're storing the proper image path
-        if (!imagePath || !imagePath.includes('/')) {
-            // Construct path if needed
-            imagePath = `images/${gameId}.jpg`; // Adjust extension if needed
-        }
-        
-        newGames.push({
-            id: gameId,
-            name: gameName,
-            imageUrl: imagePath
+    // Add event listeners for "More Info" buttons
+    const infoButtons = document.querySelectorAll('.more-info-btn');
+    infoButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const selectedGame = games.find(g => g.name === button.dataset.gamename);
+            if (selectedGame) showGameModal(selectedGame);
         });
     });
-    
-    // Combine existing and new games
-    const allGames = [...existingGames, ...newGames];
-    
-    // Store the combined list in localStorage
-    localStorage.setItem('gamesOfInterest', JSON.stringify(allGames));
-    
-    // Show confirmation and update the displayed list
-    alert(`${newGames.length} new game(s) added to your interested list!`);
-    displayInterestedGames();
+
+    // Setup checkbox event listeners with games data
+    setupCheckboxListeners(games);
+}
+
+// Function to add a game to the interested list
+function addGameToInterested(gameId) {
+    console.log('Games array:', games);  // Use the correct variable 'games'
+    console.log('GameId:', gameId);
+
+    // Find the game in the 'games' array
+    const game = games.find(g => g.id === parseInt(gameId)); // Ensure `game.id` matches your data structure
+    if (game) {
+        // If the game exists, save it to the interested list in localStorage
+        let gamesOfInterest = JSON.parse(localStorage.getItem('gamesOfInterest')) || [];
+        gamesOfInterest.push(game); // Add the game to the interest list
+        localStorage.setItem('gamesOfInterest', JSON.stringify(gamesOfInterest)); // Update localStorage
+
+        console.log('Game found:', game);
+        displayInterestedGames();  // Refresh the Interested Games list immediately
+    } else {
+        console.log('Game not found');
+    }
 }
 
 // Function to display selected games on any page
-// Function to display selected games on any page
 function displayInterestedGames() {
+    console.log('Displaying interested games'); // Debug: track when we are displaying interested games
     const interestedListDiv = document.getElementById('interestedList');
     if (!interestedListDiv) return;
     
     const gamesOfInterest = JSON.parse(localStorage.getItem('gamesOfInterest')) || [];
+    console.log('Games of Interest:', gamesOfInterest); // Debug: check what games are in the interest list
     
     if (gamesOfInterest.length === 0) {
-        interestedListDiv.innerHTML = '<p>No games selected yet. Find games and mark them as "interested" to save them here.</p>';
+        interestedListDiv.innerHTML = '<p>You have no games saved yet. Do a search and if you find a game you are interested in the results, click the checkbox to save and they will be added you a list of your favorites.</p>';
         return;
     }
     
     let html = '<div class="interested-games-grid">';
     
     gamesOfInterest.forEach(game => {
-        // Check if the image path is already a local path or needs to be constructed
-        let imagePath = game.imageUrl;
-        if (!imagePath || !imagePath.includes('/')) {
-            // Construct path if it's not already a complete path
-            const gameId = game.id || game.name.toLowerCase().replace(/\s+/g, '-');
-            imagePath = `images/${gameId}.jpg`; // Adjust extension if needed
-        }
-        
         html += `
             <div class="interested-game">
-                <img src="${imagePath}" alt="${game.name}" loading="lazy">
-                <h4>${game.name}</h4>
-                <button class="remove-interest" data-game-id="${game.id || game.name}">Remove</button>
+                <img src="images/${game.id}.jpg" alt="${game.name}" width="300" loading="lazy">
+                <div class="interest-gameinfo">
+                    <h4>${game.name}</h4>
+                    <button class="remove-interest" data-game-id="${game.id}">Remove</button>
+                </div>
             </div>
         `;
     });
@@ -244,60 +183,74 @@ function displayInterestedGames() {
 
 // Function to remove a game from the interested list
 function removeInterestedGame(gameId) {
+    console.log('Removing game from interested:', gameId); // Debug: check game being removed
     let gamesOfInterest = JSON.parse(localStorage.getItem('gamesOfInterest')) || [];
-    gamesOfInterest = gamesOfInterest.filter(game => (game.id || game.name) !== gameId);
-    localStorage.setItem('gamesOfInterest', JSON.stringify(gamesOfInterest));
-    
-    // Update the checkbox if we're on the results page
-    const checkbox = document.querySelector(`input[name="gameInterest"][value="${gameId}"]`);
-    if (checkbox) checkbox.checked = false;
-    
-    // Update the display
+    gamesOfInterest = gamesOfInterest.filter(game => game.id !== parseInt(gameId));  // Ensure correct comparison
+
+    localStorage.setItem('gamesOfInterest', JSON.stringify(gamesOfInterest));  // Update localStorage
+
+    // Refresh the interested games list
     displayInterestedGames();
 }
 
-// Setup event listeners after displaying games
 function setupCheckboxListeners() {
-    // Get existing games of interest
+    console.log('Setting up checkbox listeners'); // Debug: track checkbox listener setup
     const existingGames = JSON.parse(localStorage.getItem('gamesOfInterest')) || [];
-    const existingGameIds = new Set(existingGames.map(game => game.id || game.name));
-    
-    // Update all checkboxes to match localStorage
+    const existingGameIds = new Set(existingGames.map(game => game.id)); // Use game.id directly
+
     document.querySelectorAll('input[name="gameInterest"]').forEach(checkbox => {
         const gameId = checkbox.value;
         checkbox.checked = existingGameIds.has(gameId);
-        
-        // Add change event listener to handle immediate updates
+
         checkbox.addEventListener('change', function() {
+            console.log(`Checkbox for ${gameId} was clicked. Checked: ${this.checked}`); // Debug: track checkbox changes
+
             if (this.checked) {
-                // Add game to interested list if not already there
-                if (!existingGameIds.has(gameId)) {
-                    const gameName = this.getAttribute('data-game-name');
-                    let imagePath = this.getAttribute('data-game-image');
-                    
-                    // Ensure proper image path
-                    if (!imagePath || !imagePath.includes('/')) {
-                        imagePath = `images/${gameId}.jpg`;
-                    }
-                    
-                    existingGames.push({
-                        id: gameId,
-                        name: gameName,
-                        imageUrl: imagePath
-                    });
-                    
-                    existingGameIds.add(gameId);
-                    localStorage.setItem('gamesOfInterest', JSON.stringify(existingGames));
-                    displayInterestedGames();
-                }
+                addGameToInterested(gameId);  // Pass the gameId directly
             } else {
-                // Remove game from interested list if checkbox is unchecked
-                const updatedGames = existingGames.filter(game => 
-                    (game.id || game.name) !== gameId);
-                localStorage.setItem('gamesOfInterest', JSON.stringify(updatedGames));
-                existingGameIds.delete(gameId);
-                displayInterestedGames();
+                removeInterestedGame(gameId);
             }
         });
     });
 }
+
+console.log('Path:', window.location.pathname);  // Debug: check page path
+
+// Function to show the modal with game details
+function showGameModal(game) {
+    // Populate the modal with game data
+    document.getElementById('modalGameName').textContent = game.name;
+    document.getElementById('modalGameImage').src = game.imageUrl;
+    document.getElementById('modalGameImage').alt = game.name;
+    document.getElementById('modalGamePlayers').textContent = `Players: ${game.players}`;
+    document.getElementById('modalGameComplexity').textContent = `Complexity: ${game.complexity}`;
+    document.getElementById('modalGameGenres').textContent = `Genres: ${game.genres.join(', ')}`;
+    document.getElementById('modalGameMechanics').textContent = `Mechanics: ${game.mechanics.join(', ')}`;
+    document.getElementById('modalGameLength').textContent = `Play Time: ${game.length} min`;
+    
+    // Display the modal
+    document.getElementById('gameModal').style.display = 'block';
+}
+
+// Add event listeners when the page loads
+document.addEventListener('DOMContentLoaded', function() {
+    // Existing code here...
+    
+    // Close modal when clicking the X button
+    const closeBtn = document.getElementById('closeModalBtn');
+    if (closeBtn) {
+        closeBtn.addEventListener('click', function() {
+            document.getElementById('gameModal').style.display = 'none';
+        });
+    }
+    
+    // Close modal when clicking outside the modal content
+    const modal = document.getElementById('gameModal');
+    if (modal) {
+        window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    }
+});
