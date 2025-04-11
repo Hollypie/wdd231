@@ -26,7 +26,7 @@ function displayGameLibrary(games) {
 
         card.setAttribute("class", "gameCard");
         name.textContent = game.name;
-        image.setAttribute("src", `images/${game.id}.jpg`);
+        image.setAttribute("src", `images/${game.id}.webp`);
         image.setAttribute("alt", game.name); 
         image.setAttribute("loading", "lazy");
         image.setAttribute("width", "300px");
@@ -57,7 +57,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 
 function showGameModal(game) {
     document.getElementById('modalGameName').textContent = game.name;
-    document.getElementById('modalGameImage').src = `images/${game.id}.jpg`;
+    document.getElementById('modalGameImage').src = `images/${game.id}.webp`;
     document.getElementById('modalGameImage').alt = game.name;
     document.getElementById('modalGamePlayers').textContent = `Players: ${game.min_players}-${game.max_players} players`;
     document.getElementById('modalGameComplexity').textContent = `Complexity: ${game.complexity}`;

@@ -160,7 +160,7 @@ function displayInterestedGames() {
     gamesOfInterest.forEach(game => {
         html += `
             <div class="interested-game">
-                <img src="images/${game.id}.jpg" alt="${game.name}" width="300" loading="lazy">
+                <img src="images/${game.id}.webp" alt="${game.name}" width="300" loading="lazy">
                 <div class="interest-gameinfo">
                     <h4>${game.name}</h4>
                     <button class="remove-interest" data-game-id="${game.id}">Remove</button>
@@ -220,7 +220,7 @@ console.log('Path:', window.location.pathname);  // Debug: check page path
 function showGameModal(game) {
     // Populate the modal with game data
     document.getElementById('modalGameName').textContent = game.name;
-    document.getElementById('modalGameImage').src = game.imageUrl;
+    document.getElementById('modalGameImage').src = `images/${game.id}.webp`;
     document.getElementById('modalGameImage').alt = game.name;
     document.getElementById('modalGamePlayers').textContent = `Players: ${game.players}`;
     document.getElementById('modalGameComplexity').textContent = `Complexity: ${game.complexity}`;
