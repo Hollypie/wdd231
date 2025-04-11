@@ -88,7 +88,7 @@ function displayGames(games) {
 
     resultsDiv.innerHTML = games.map(game => `
       <div class="gameCard">
-        <img src="${game.imageUrl}" alt="${game.name}" style="max-width: 200px;">
+        <img src="images/${game.id}.webp" alt="${game.name}" style="max-width: 200px;">
         <div class=cardDetails>
             <h3>${game.name}</h3>
             <p><strong>Players:</strong> ${game.players}</p>
@@ -99,7 +99,7 @@ function displayGames(games) {
 
             <label>
             <input class="check" type="checkbox" name="gameInterest" value="${game.id}" 
-                    data-game-image="${game.imageUrl}"
+                    data-game-image="images/${game.id}.webp"
                     data-game-name="${game.name}">
             Save this Game in My Favorites List
             </label>
