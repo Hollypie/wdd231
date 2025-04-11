@@ -334,3 +334,19 @@ main.about-me .centered-div img {
     width: 80%;
     margin: 1rem;
 }
+
+.remove-interest {
+    padding: 1rem;
+    background-color: var(--second-color);
+    color: white;
+    border: none;
+    margin: .5rem;
+}
+
+.remove-interest:hover {
+    background-color: var(--primary-color);
+}
+
+main p, main a {
+    margin: 1rem;
+}
