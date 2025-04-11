@@ -339,7 +339,7 @@
       "Gardening",
       "Nature"
     ],
-    "imageUrl": "https://cf.geekdo-images.com/0HHqYFhJvOwk8Z0Dt-EvTA__original/img/PUZECnFJTnvhRL48lpUzR5TR48w=/0x0/filters:format(jpeg)/pic7083274.jpg", 
+    "imageUrl": "https://cf.geekdo-images.com/0HHqYFhJvOwk8Z0Dt-EvTA__original/img/PUZECnFJTnvhRL48lpUzR5TR48w=/0x0/filters:format(jpeg)/pic7083274.jpg",
     "review": "Beautiful art and simple set collection. Perfect for a calm, short game night.",
     "rating": "6/10"
   },
@@ -550,7 +550,7 @@
     ],
     "imageUrl": "https://cf.geekdo-images.com/ryPiCH15spkrdtvUI-utuA__original/img/RYiSrrenTejCl149T6tc2d9CuwA=/0x0/filters:format(jpeg)/pic6966125.jpg",
     "review": "A great intro to cooperative tower defense. Simple fun with escalating stakes.",
-        "rating": "6/10"
+    "rating": "6/10"
   },
   {
     "id": 15062,
@@ -811,5 +811,88 @@
     "imageUrl": "https://cf.geekdo-images.com/KshsJJWgb265ZQjcxyZ89w__original/img/xnOVN46wMhi0thUUWnkkYPB68-k=/0x0/filters:format(jpeg)/pic6149210.jpg",
     "review": "A light, nostalgic deck-builder with a breezy theme and simple fun.",
     "rating": "10/10"
+  },
+  {
+    "id": 375852,
+    "name": "Lil' Everdell",
+    "players": "1-4",
+    "min_players": 1,
+    "max_players": 4,
+    "complexity": "light",
+    "genres": [
+      "family",
+      "strategy"
+    ],
+    "mechanics": [
+      "worker-placement",
+      "set-collection",
+      "tableau-building"
+    ],
+    "length": "30",
+    "year": 2023,
+    "publisher": "Starling Games",
+    "themes": [
+      "Forest",
+      "Animals",
+      "Whimsical"
+    ],
+    "imageUrl": "https://cf.geekdo-images.com/uiBmXfOY7C6ft4uisq7XDg__original/img/7xaAvQaTs7ir8GjKJOTdyi9fgj0=/0x0/filters:format(jpeg)/pic8123860.jpg",
+    "review": "A simplified and charming version of Everdell made for younger players, but with the same woodland magic.",
+    "rating": "7/10"
+  },
+  {
+    "id": 199792,
+    "name": "Everdell",
+    "players": "1-4",
+    "min_players": 1,
+    "max_players": 4,
+    "complexity": "medium",
+    "genres": [
+      "strategy",
+      "family"
+    ],
+    "mechanics": [
+      "worker-placement",
+      "card-drafting",
+      "tableau-building"
+    ],
+    "length": "40-80",
+    "year": 2018,
+    "publisher": "Starling Games",
+    "themes": [
+      "Forest",
+      "Animals",
+      "Fantasy"
+    ],
+    "imageUrl": "https://cf.geekdo-images.com/fjE7V5LNq31yVEW_yuqI-Q__original/img/HQ1ti16wT9lqja5_h3gUfHUIcVI=/0x0/filters:format(png)/pic3918905.png",
+    "review": "Stunning art and clever mechanics make this woodland city-builder a favorite for strategic yet relaxing play.",
+    "rating": "8/10"
+  },
+  {
+    "id": 309129,
+    "name": "Disney Haunted Mansion: Call of the Spirits",
+    "players": "2-6",
+    "min_players": 2,
+    "max_players": 6,
+    "complexity": "light",
+    "genres": [
+      "family",
+      "thematic"
+    ],
+    "mechanics": [
+      "set-collection",
+      "grid-movement"
+    ],
+    "length": "30-45",
+    "year": 2020,
+    "publisher": "Funko Games",
+    "themes": [
+      "Ghosts",
+      "Haunted House",
+      "Disney"
+    ],
+    "imageUrl": "https://cf.geekdo-images.com/NhFR1vXQ7l3FAE-AimJQZA__original/img/DiEN3A6Pgi2FdcvHF6NT6SU5jic=/0x0/filters:format(png)/pic5523719.png",
+    "review": "A spooky, family-friendly game with beautiful Disney art and light strategy for ghostly fun.",
+    "rating": "6.5/10"
   }
 ]

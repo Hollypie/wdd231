@@ -44,16 +44,6 @@ header img {
     font-size: 1rem;
 }
 
-@media (max-width: 480px) {
-    #headerTitle h1 {
-        font-size: 1.6rem;
-    }
-
-    #headerTitle p {
-        font-size: 0.9rem;
-    }
-}
-
 /* navigation stuff */
 
 nav {
@@ -159,32 +149,9 @@ footer {
     color: white;
 }
 
-dialog {
-    border: 1px solid rgb(0 0 0 / 0.1);
-    border-radius: .25rem;
-    padding: 1rem;
-    background-color: #fff;
-    box-shadow: 0 0 3rem #777;
-    width: 90%;
-    max-width: 600px;
-}
 
-::backdrop {
-    background-color: rgb(0 0 0 / 0.5);
-}
-
-dialog button {
-    position: absolute;
-    top: 23px;
-    right: 23px;
-    padding: .5rem 1rem;
-    border: 1px solid rgb(0 0 0 / 0.1);
-}
 
 /* message displays on discover.html */
-#visitMessage {
-    margin: 1rem;
-}
 
 #interestedList {
     display: flex;
