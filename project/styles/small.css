@@ -6,7 +6,7 @@
 
 :root {
     --primary-color: #016492;
-    --second-color:  #00415f;
+    --second-color:  rgb(131, 24, 24);
     --accent-color: #e9cc2a;
     --background-color: #CDCBD6;
     --light-font-color: white;  
@@ -310,7 +310,11 @@ main.about-me .centered-div img {
     color: black;
     padding: 1rem;
     margin: 1rem;
-    border-radius: 1rem;
+}
+
+.centered-div {
+    border: 5px dotted var(--background-color);
+    padding: 1rem;
 }
 
 .interested-game h4 {
@@ -362,5 +366,4 @@ main.about-me .centered-div img {
     border: 5px dotted var(--background-color);
     width: 80%;
     margin: 1rem;
-    border-radius: 1rem;
 }
