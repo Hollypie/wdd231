@@ -3,16 +3,16 @@ let games = [];
 document.addEventListener('DOMContentLoaded', async () => {
     // Check if we're on the results page or index page
     const isResultsPage = window.location.pathname.includes('results.html');
-    console.log('Is Results Page:', isResultsPage);  // Debug: check if on results page
+    console.log('Is Results Page:', isResultsPage);  
 
     if (isResultsPage) {
         // Results page functionality
         const filters = getQueryParams();
-        console.log('Filters:', filters); // Debug: check filters
-        games = await fetchGames();  // Populate games globally
-        console.log('Fetched Games:', games); // Debug: check if games were fetched
+        console.log('Filters:', filters);
+        games = await fetchGames();  
+        console.log('Fetched Games:', games); 
         const filteredGames = filterGames(games, filters);
-        console.log('Filtered Games:', filteredGames); // Debug: check if filtering works
+        console.log('Filtered Games:', filteredGames);
         displayGames(filteredGames);
     }
 

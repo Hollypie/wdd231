@@ -13,18 +13,18 @@ document.addEventListener('DOMContentLoaded', async () => {
         const filters = getQueryParams();
         games = await fetchGames();
         const filteredGames = filterGames(games, filters);
-        displayGames(filteredGames, showGameModal, setupCheckboxListeners);  // Display filtered games
+        displayGames(filteredGames, showGameModal, setupCheckboxListeners); 
     }
 
-    // Ensure interested games are always displayed
+  
     displayInterestedGames();
 
-    // Attach modal listeners
+  
     setupModalListeners();
 });
 
-// Optional: Add event listener to trigger re-rendering when games of interest are added/removed
+
 window.addEventListener('storage', () => {
-    displayInterestedGames();  // Re-render the list if there are changes in localStorage
+    displayInterestedGames(); 
 });
 

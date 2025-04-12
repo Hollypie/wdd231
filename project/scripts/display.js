@@ -4,7 +4,7 @@ export function displayGames(games, showGameModal, setupCheckboxListeners) {
     const resultsDiv = document.getElementById('results');
     if (!resultsDiv) return;
 
-    // Get saved games to check which checkboxes should be checked
+ 
     const gamesOfInterest = JSON.parse(localStorage.getItem('gamesOfInterest')) || [];
     const savedGameIds = gamesOfInterest.map(game => game.id);
 
@@ -30,7 +30,6 @@ export function displayGames(games, showGameModal, setupCheckboxListeners) {
       </div>
     `).join('');
 
-    // Event Listeners
     const infoButtons = document.querySelectorAll('.more-info-btn');
     infoButtons.forEach(button => {
         button.addEventListener('click', () => {
@@ -69,7 +68,7 @@ export function displayInterestedGames() {
     html += '</div>';
     interestedListDiv.innerHTML = html;
 
-    // Reattach event listeners for the remove buttons
+    
     document.querySelectorAll('.remove-interest').forEach(button => {
         button.addEventListener('click', function() {
             const gameId = parseInt(this.getAttribute('data-game-id'));
